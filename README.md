@@ -1,3 +1,2 @@
-# 4Square
-
+# My Trip Guide
 
