@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Header() {
   return (
-      <Navbar collapseOnSelect bg="dark" variant="dark">
+      <Navbar id='navbar' collapseOnSelect variant="dark">
         <Navbar.Brand className="ms-5">
           <Link className="text-white navbar-logo" to="/">
             React-Bootstrap

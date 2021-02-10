@@ -15,3 +15,16 @@ display: table-cell;
 text-align: center;
 vertical-align: middle;
   }
+
+.input-search {
+ 
+  height: 8vh
+  
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+#navbar{
+  background-color: rgba(92, 92, 92, 0.507) !important;
+}
