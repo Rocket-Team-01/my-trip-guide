@@ -10,26 +10,18 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div>
-          <Header />
-          <Container fluid>
-            <Row>
-              <Col>
-                <Switch>
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                  <Route path="/login">
-                    <Login />
-                  </Route>
-                  <Route exact path="/signup">
-                    <SignUp />
-                  </Route>
-                </Switch>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );
