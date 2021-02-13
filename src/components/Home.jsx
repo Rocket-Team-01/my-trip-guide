@@ -40,23 +40,26 @@ export default function Home() {
 
   return (
     <div>
-      <Container fluid id="home">
-        <Row>
-        <Header/>
-        </Row>
-        <Row className=" justify-content-center align-items-center" >
-        <div className="landing-text text-light">
-          <h1>Search For</h1>
-          <h3>Best Restaurants</h3>
-          <Row className=" justify-content-center align-items-center" >
+      <Container fluid id="home" className="m-0 p-0" >
+        <Row className="m-0 p-0" >
+        <Header />
+        </Row  >
+        <Row className=" justify-content-center align-items-center m-0 p-0" >
+        <div className="landing-text text-light mt-5 pt-5">
+          <h1 className="pb-2" >Search For</h1>
+          <h4 className="pb-4" >Best Restaurants</h4>
+          <Row className=" justify-content-center align-items-center m-0 p-0" >
             <Col sm={8}>
-              <InputGroup className="mb-3">
+              <InputGroup className="m-0 p-0">
                 <FormControl
-                  className="input-search"
+                  className="input-search m-0 p-2"
                   placeholder="Adana/Pozanti"
                 />
                 <InputGroup.Append>
-                  <Button variant="light">Search</Button>
+                  <Button variant="danger">Category</Button>
+                </InputGroup.Append>
+                <InputGroup.Append>
+                  <Button variant="dark">Search</Button>
                 </InputGroup.Append>
               </InputGroup>
             </Col>
@@ -69,7 +72,7 @@ export default function Home() {
         <Row className="text-center">
           {best.map((item, index) => {
             return (
-              <Col key={index} xs={4}>
+              <Col key={index} xs={12} sm={12} md={6} lg={4} xl={3}>
                 <div>
                   <h2 className="py-5 fs-4">{item.restaurant.name}</h2>
                   {item.restaurant.featured_image ? (

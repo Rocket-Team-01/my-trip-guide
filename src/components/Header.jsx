@@ -6,14 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Header() {
   return (
       <Navbar id='navbar' collapseOnSelect variant="dark">
-        <Navbar.Brand className="ms-5">
+        <Navbar.Brand className="">
           <Link className="text-white navbar-logo" to="/">
             React-Bootstrap
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto me-5">         
+          <Nav className="ms-auto">         
               <Link className="nav-link" to="/">
                 HomePage
               </Link>        

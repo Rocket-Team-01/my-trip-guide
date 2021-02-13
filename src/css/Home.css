@@ -1,25 +1,21 @@
 #home{
-    background: url('https://images.unsplash.com/photo-1516528387618-afa90b13e000?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg') no-repeat center center fixed;
     display: table;
     height:100vh;
     position: relative;
-    width: 100%;
     background-size: cover;
     -webkit-background-size : cover;
     -moz-background-size: cover;
-
   }
 
-  .landing-text {
+.landing-text {
 display: table-cell;
 text-align: center;
 vertical-align: middle;
-  }
+}
 
 .input-search {
- 
-  height: 8vh
-  
+  height: 8vh;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(255, 255, 255);
