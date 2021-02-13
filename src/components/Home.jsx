@@ -67,14 +67,14 @@ export default function Home() {
         </div>
         </Row>
       </Container>
-      <h1 className="text-center">The Most Popular Restaurants</h1>
-      <Container fluid>
+      <h1 className="text-center py-5 bg-light underline">The Most Popular Restaurants</h1>
+      <Container fluid className="bg-dark" >
         <Row className="text-center">
-          {best.map((item, index) => {
+          {best.slice(0,8).map((item, index) => {
             return (
               <Col key={index} xs={12} sm={12} md={6} lg={4} xl={3}>
                 <div>
-                  <h2 className="py-5 fs-4">{item.restaurant.name}</h2>
+                  <h2 className="py-5 fs-4 text-white">{item.restaurant.name}</h2>
                   {item.restaurant.featured_image ? (
                     <Image
                       style={{ width: "200px", height: "200px" }}
@@ -85,6 +85,7 @@ export default function Home() {
                     <Image
                       style={{ width: "200px", height: "200px" }}
                       src="https://b.zmtcdn.com/images/res_avatar_476_320_1x_new.png?output-format=webp%22"
+                      className="mb-5"
                       thumbnail
                     />
                   )}

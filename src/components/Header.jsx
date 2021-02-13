@@ -8,7 +8,7 @@ function Header() {
       <Navbar id='navbar' collapseOnSelect variant="dark">
         <Navbar.Brand className="">
           <Link className="text-white navbar-logo" to="/">
-            React-Bootstrap
+            Restaurant Searcher
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -18,10 +18,10 @@ function Header() {
                 HomePage
               </Link>        
               <Link className="nav-link" to="/signup">
-                signup
+                Signup
               </Link>
               <Link className="nav-link" to="/login">
-                login
+                Login
               </Link>
           </Nav>
         </Navbar.Collapse>
