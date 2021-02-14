@@ -9,7 +9,7 @@ export default function App() {
       method: "GET",
       url: "https://developers.zomato.com/api/v2.1/search",
       headers: {
-        "user-key": "415c9b42482714e36aa1e285b7ab62be",
+        "user-key": "82ff80af46d4915b4282ae5410d607b3",
         "content-type": "application/json"
       }
     })
