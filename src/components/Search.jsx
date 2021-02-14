@@ -9,26 +9,51 @@ function Search(props) {
     const { query } = params;
     console.log(`&query= ${query}`)
 
-    // useEffect(() => {
-    //     var requestOptions = {
-    //         method: 'GET',
-    //         headers: {
-    //             "user-key": "415c9b42482714e36aa1e285b7ab62be",
-    //             "content-type": "application/json",
-    //           },
-    //         redirect: 'follow'
-    //     };
+    const [city, setCity] = useState([]);
 
-    //     fetch("https://developers.zomato.com/api/v2.1/search?q=Adana", requestOptions)
-    //         .then(response => response.json())
-    //         .then(result =>{
-    //             setData(result);
-    //             console.log(result.results_found);
-    //         })
-    //         .catch(error => console.log('error', error));
-    //         console.log("calıstı")
-    // }, [])
 
+    useEffect(() => {
+        var requestOptions = {
+            method: 'GET',
+            headers: {
+                "user-key": "415c9b42482714e36aa1e285b7ab62be",
+                "content-type": "application/json",
+              },
+            redirect: 'follow'
+        };
+
+        fetch(`https://developers.zomato.com/api/v2.1/cities?q=${query}\n`, requestOptions)
+            .then(response => response.json())
+            .then(result =>{
+                console.log(result.location_suggestions[0].id);
+                setCity(result.location_suggestions[0].id);
+
+            })
+            .catch(error => console.log('error', error));
+            console.log("calıstı")
+    }, [])
+
+    
+     useEffect(() => {
+         var requestOptions = {
+             method: 'GET',
+             headers: {
+                 "user-key": "415c9b42482714e36aa1e285b7ab62be",
+                 "content-type": "application/json",
+               },
+             redirect: 'follow'
+         };
+
+         fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=${city}&entity_type=city&sort=rating&order=dsc`, requestOptions)
+             .then(response => response.json())
+             .then(result =>{
+                 setData(result);
+                 console.log(result.restaurants);
+             })
+             .catch(error => console.log('error', error));
+             console.log("calıstı")
+     }, [])
+     
 
 
     return (
