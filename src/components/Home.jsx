@@ -16,7 +16,7 @@ import axios from "axios";
 import "../css/Home.css";
 import Header from "./Header";
 
-export default function Home() {
+export default function Home(props) {
   let history = useHistory();
   const [value, setValue] = React.useState("");
   const [best, setBest] = useState([]);
@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <div>
       <Container fluid id="home" className="m-0 p-0" >
-        <Row className="m-0 p-0" >
+        <Row className="m-0 p-0 " >
         <Header />
         </Row  >
         <Row className=" justify-content-center align-items-center m-0 p-0" >
