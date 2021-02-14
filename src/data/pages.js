@@ -1,7 +1,7 @@
 import Home from "../components/Home"
 import SignUp from "../components/SignUp"
 import Login from "../components/Login"
-
+import Search from "../components/Search"
 
 
 
@@ -24,6 +24,13 @@ const pages = [{
         "exact": false,
         "component": Login,
         "link": "/login",
+        "isActive": true
+    },
+    {
+        "title": "Search",
+        "exact": false,
+        "component": Search,
+        "link": "/search",
         "isActive": true
     }
 ]
