@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import {
   Card,
@@ -11,18 +11,19 @@ import {
   Image,
   InputGroup,
   FormControl,
-  Form
+  Form,
 } from "react-bootstrap";
 
 function Search(props) {
   const params = useParams();
   const { query } = params;
-  /*
-    console.log(`&query= ${query}`)
-    */
-  // const [city, setCity] = useState([]);
+  let history = useHistory();
+
   const [cityRest, setCityRest] = useState([]);
-  const {handleSubmit} = props;
+  function handleSubmit(event) {
+    setValue(value.toLowerCase());
+    history.push(`/search/${value}`);
+  }
   const [value, setValue] = React.useState("");
   function getCityID() {
     var requestOptions = {
@@ -89,7 +90,7 @@ function Search(props) {
           <InputGroup className="m-0 p-0" as={Form} onSubmit={handleSubmit}>
             <FormControl
               className="input-search m-0 p-2"
-              placeholder="Adana/Pozanti"
+              placeholder={query}
               onChange={(event) => {
                 setValue(event.target.value);
               }}
