@@ -7,30 +7,30 @@ import Search from "../components/Search"
 
 const pages = [{
         "title": "Home",
-        "exact": true,
+        "isExact": true,
         "component": Home,
         "link": "/",
         "isActive": true
     },
     {
         "title": "SignUp",
-        "exact": false,
+        "isExact": false,
         "component": SignUp,
         "link": "/signup",
         "isActive": true
     },
     {
         "title": "Login",
-        "exact": false,
+        "isExact": false,
         "component": Login,
         "link": "/login",
         "isActive": true
     },
     {
         "title": "Search",
-        "exact": false,
+        "isExact": true,
         "component": Search,
-        "link": "/search",
+        "link": "/search/:query",
         "isActive": true
     }
 ]

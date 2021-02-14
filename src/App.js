@@ -4,24 +4,21 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Search from "./components/Search";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import pages from './data/pages'
 function App() {
+  const routeMaps = pages.map((item, index) => (
+    <Route
+      key={index}
+      exact={item.isExact}
+      path={item.link}
+      component={item.component}
+    />
+  ));
   return (
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route exact path="/signup">
-            <SignUp />
-          </Route>
+        {routeMaps}
         </Switch>
       </BrowserRouter>
     </div>

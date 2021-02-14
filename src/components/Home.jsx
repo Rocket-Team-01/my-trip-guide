@@ -1,12 +1,14 @@
 import {
   Container,
   InputGroup,
+  Form,
   FormControl,
   Button,
   Image,
   Col,
   Row,
 } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import React, { useEffect, useState } from "react";
@@ -15,6 +17,8 @@ import "../css/Home.css";
 import Header from "./Header";
 
 export default function Home() {
+  let history = useHistory();
+  const [value, setValue] = React.useState("");
   const [best, setBest] = useState([]);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((response) => {
@@ -38,6 +42,10 @@ export default function Home() {
     });
   }, []);
 
+  function handleSubmit(event) {
+    setValue(value.toLowerCase());
+    history.push(`/search/${value}`);
+  }
   return (
     <div>
       <Container fluid id="home" className="m-0 p-0" >
@@ -50,16 +58,22 @@ export default function Home() {
           <h4 className="pb-4" >Best Restaurants</h4>
           <Row className=" justify-content-center align-items-center m-0 p-0" >
             <Col sm={8}>
-              <InputGroup className="m-0 p-0">
+              <InputGroup 
+              className="m-0 p-0"
+              as={Form}
+              onSubmit={handleSubmit}>
                 <FormControl
                   className="input-search m-0 p-2"
                   placeholder="Adana/Pozanti"
+                  onChange={(event) => {
+                    setValue(event.target.value);
+                  }}
                 />
                 <InputGroup.Append>
                   <Button variant="danger">Category</Button>
                 </InputGroup.Append>
                 <InputGroup.Append>
-                  <Button variant="dark">Search</Button>
+                  <Button variant="dark" type='submit'>Search</Button>
                 </InputGroup.Append>
               </InputGroup>
             </Col>
