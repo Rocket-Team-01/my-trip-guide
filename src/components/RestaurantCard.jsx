@@ -93,7 +93,7 @@ export default function RestaurantCard(props) {
                         <h5 className="modal-title" id="exampleModalLabel">
                           {name}{" "}
                           <span className="ml-3 bg-success rounded-3 text-white p-1">
-                            {number} <i class="fas fa-phone"></i>
+                            {number} <i className="fas fa-phone"></i>
                           </span>
                         </h5>
                         <button

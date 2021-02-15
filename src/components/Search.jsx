@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
+import CategoriesButton from "./CategoriesButton";
 import {
   Row,
   Col,
@@ -12,6 +13,10 @@ import {
 } from "react-bootstrap";
 
 function Search(props) {
+
+  const [categoryName,setCategoryName]= useState()
+  const [categoryID,setCategoryID]= useState()
+
   const params = useParams();
   const { query } = params;
   let history = useHistory();
@@ -59,20 +64,24 @@ function Search(props) {
     )
       .then((response) => response.json())
       .then((result) => {
-        setCityRest(result.restaurants); 
+        setCityRest(result.restaurants);
       })
       .catch((error) => console.log("error", error));
   }
 
   useEffect(() => {
     getCityID();
-  },);
+  }, []);
 
   return (
-    <div className="searchback" >
+    <div className="searchback">
       <Row className=" justify-content-center align-items-center m-0 py-5">
         <Col sm={8}>
-          <InputGroup className="m-0 p-0 border border-dark rounded-3" as={Form} onSubmit={handleSubmit}>
+          <InputGroup
+            className="m-0 p-0 border border-dark rounded-3"
+            as={Form}
+            onSubmit={handleSubmit}
+          >
             <FormControl
               className="input-search m-0 p-2"
               placeholder={query}
@@ -81,7 +90,11 @@ function Search(props) {
               }}
             />
             <InputGroup.Append>
-              <Button variant="danger">Category</Button>
+              {/* <Button variant="danger">Category</Button> */}
+              <CategoriesButton
+                setCategoryName={setCategoryName}
+                setCategoryID={setCategoryID}
+              />
             </InputGroup.Append>
             <InputGroup.Append>
               <Button variant="dark" type="submit">
@@ -91,10 +104,9 @@ function Search(props) {
           </InputGroup>
         </Col>
       </Row>
-      <RestaurantCard cityRest={cityRest}/>
+      <RestaurantCard cityRest={cityRest} />
     </div>
   );
 }
 
 export default Search;
-
