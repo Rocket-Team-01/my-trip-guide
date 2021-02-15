@@ -31,7 +31,7 @@ export default function Home(props) {
         method: "GET",
         url: `https://developers.zomato.com/api/v2.1/search?lat=${lat}&lon=${lon}`,
         headers: {
-          "user-key": "415c9b42482714e36aa1e285b7ab62be",
+          "user-key": "7a5271a9bcd39c98815f81510b921ec4",
           "content-type": "application/json",
         },
       })
