@@ -1,0 +1,11 @@
+.dropdown-category {
+    flex: 1;
+    background: rgb(255, 255, 255);
+    overflow-y: scroll;
+    height: 40vh;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: row;
+    
+  }
