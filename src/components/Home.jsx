@@ -14,12 +14,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/Home.css";
-import Header from "./Header";
+import Header from "./Header"
+import CategoriesButton from './CategoriesButton'
 
 export default function Home(props) {
   let history = useHistory();
   const [value, setValue] = React.useState("");
   const [best, setBest] = useState([]);
+  const [categoryName,setCategoryName]= useState()
+  const [categoryID,setCategoryID]= useState()
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((response) => {
       const lat = response.coords.latitude;
@@ -45,6 +48,8 @@ export default function Home(props) {
   function handleSubmit(event) {
     setValue(value.toLowerCase());
     history.push(`/search/${value}`);
+    console.log(categoryName)
+    console.log(categoryID)
   }
   return (
     <div>
@@ -70,7 +75,8 @@ export default function Home(props) {
                   }}
                 />
                 <InputGroup.Append>
-                  <Button variant="danger">Category</Button>
+                  {/* <Button variant="danger">Category</Button> */}
+                  <CategoriesButton setCategoryName={setCategoryName} setCategoryID={setCategoryID} />
                 </InputGroup.Append>
                 <InputGroup.Append>
                   <Button variant="dark" type='submit'>Search</Button>
