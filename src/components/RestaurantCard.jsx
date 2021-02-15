@@ -9,24 +9,25 @@ export default function RestaurantCard(props) {
           {props.cityRest.map((item, index) => (
             <Row key={index} className="w-50 my-3  mx-auto">
 
-              <Col sm={4}  >
+              <Col xs={12} sm={12} md={12} lg={6} xl={4}>
                 {item.restaurant.featured_image ? (
                   <Image
                     className="my-3 mx-1 rounded-3 border border-dark"
                     style={{ width: "170px", height: "120px" }}
                     src={item.restaurant.featured_image}
                     
+                    
                   />
                 ) : (
                     <Image
-                      style={{ width: "200px", height: "150px" }}
+                      style={{ width: "170px", height: "120px" }}
                       src="https://b.zmtcdn.com/images/res_avatar_476_320_1x_new.png?output-format=webp%22"
-                      className="my-3 mx-2"
+                      className="my-3 mx-2 rounded-3 border border-dark"
                       
                     />
                   )}
               </Col>
-              <Col sm={8} className="pt-3" >
+              <Col xs={12} sm={12} md={0} lg={6} xl={8} className="pt-3" >
                 <h3 className="text-dark fs-5 font-weight-bold" >{item.restaurant.name}</h3>
                 <h6 className="text-dark">Phone Number: {item.restaurant.phone_numbers.slice(0,12)}</h6>
                 <h6 className="text-dark">Rating: {item.restaurant.user_rating.aggregate_rating} ({item.restaurant.user_rating.votes})</h6>
