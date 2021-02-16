@@ -9,6 +9,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "i18next": "^19.8.7",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.1.0",
     "jquery": "^3.5.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",

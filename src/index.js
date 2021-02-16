@@ -1,5 +1,5 @@
-import React from 'react';
-import "./i18n";
+import React, { Suspense } from "react";
+import "./i18next.js";
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -7,7 +7,10 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+      <Suspense fallback={[<div>loading</div>]}>
     <App />
+  </Suspense>,
+   
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -6,9 +6,9 @@ import Header from "./Header";
 import SearchInput from "./SearchInput";
 import { useTranslation } from "react-i18next";
 import RestaurantCard from "./RestaurantCard";
-
+import i18next from "i18next";
 export default function Home(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [result, setResult] = useState([]);
   const [city, setCity] = useState("");
 
@@ -45,15 +45,22 @@ export default function Home(props) {
         .catch((error) => console.log("error", error));
     });
   }, []);
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang);
+    console.log(lang)
+  }
   return (
     <div>
+      <button onClick={() => handleClick("en")}>en</button>
+      <button onClick={() => handleClick("tr")}>tr</button>
       <Container fluid id="home" className="m-0 p-0">
         <Row className="m-0 p-0 ">
           <Header />
         </Row>
         <Row className=" justify-content-center align-items-center m-0 p-0">
           <div className="landing-text text-light mt-5 pt-5">
-            <h1 className="pb-2">Search For</h1>
+            <h1 className="pb-2">{t("greeting.1")}</h1>
             <h4 className="pb-4">Best Restaurants</h4>
             <Row className=" justify-content-center align-items-center m-0 p-0">
               <Col sm={8}>
