@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { InputGroup, Form, FormControl, Button } from "react-bootstrap";
-
 import CategoriesButton from "./CategoriesButton";
 
 function SearchInput() {

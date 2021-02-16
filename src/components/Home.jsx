@@ -5,8 +5,12 @@ import axios from "axios";
 import "../css/Home.css";
 import Header from "./Header";
 import SearchInput from "./SearchInput";
+import {useTranslation} from "react-i18next";
 
 export default function Home(props) {
+
+  const { t, i18n} = useTranslation();
+
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [cost, setCost] = useState("");
@@ -45,8 +49,7 @@ export default function Home(props) {
         </Row>
         <Row className=" justify-content-center align-items-center m-0 p-0">
           <div className="landing-text text-light mt-5 pt-5">
-            <h1 className="pb-2">Search For</h1>
-            <h4 className="pb-4">Best Restaurants</h4>
+            <h4 className="pb-4 greeting">{t("greeting")}</h4>
             <Row className=" justify-content-center align-items-center m-0 p-0">
               <Col sm={8}>
                 <SearchInput />
@@ -58,8 +61,8 @@ export default function Home(props) {
       <h1 className="text-center py-5 bg-light underline">
         The Most Popular Restaurants
       </h1>
-      <Container fluid className="bg-white">
-        <Row>
+      <Container className="bg-white">
+        <Row  >
           {best.slice(0, 8).map((item, index) => {
             return (
               <Row
