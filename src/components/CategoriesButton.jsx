@@ -7,7 +7,6 @@ import { LanguageContext } from "../context/LanguageContext";
 // import {categories} from '../../public/locales/tr/translation.json'
 function CategoriesButton(props) {
   const languageContextAPI = React.useContext(LanguageContext);
-  
 
   const [title, setTitle] = useState();
 
