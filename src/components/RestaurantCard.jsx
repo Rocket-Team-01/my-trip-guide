@@ -141,7 +141,3 @@ export default function RestaurantCard(props) {
   );
 }
 
-
-/*
-{item.restaurant.user_rating.votes}
-*/
