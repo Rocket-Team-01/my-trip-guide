@@ -28,6 +28,7 @@ function SearchInput(props) {
     <div>
       <InputGroup className="m-0 p-0" as={Form} onSubmit={handleSubmit}>
         <FormControl
+          required
           className="input-search m-0 p-2"
           placeholder={query}
           onChange={(event) => {
