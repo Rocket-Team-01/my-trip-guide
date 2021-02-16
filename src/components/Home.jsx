@@ -52,16 +52,13 @@ export default function Home(props) {
   }
   return (
     <div>
-      <button onClick={() => handleClick("en")}>en</button>
-      <button onClick={() => handleClick("tr")}>tr</button>
       <Container fluid id="home" className="m-0 p-0">
         <Row className="m-0 p-0 ">
           <Header />
         </Row>
         <Row className=" justify-content-center align-items-center m-0 p-0">
           <div className="landing-text text-light mt-5 pt-5">
-            <h1 className="pb-2">{t("greeting.1")}</h1>
-            <h4 className="pb-4">Best Restaurants</h4>
+            <h1 className="pb-5">{t("greeting.1")}</h1>
             <Row className=" justify-content-center align-items-center m-0 p-0">
               <Col sm={8}>
                 <SearchInput />
@@ -88,34 +85,3 @@ export default function Home(props) {
   );
 }
 
-/* 
-<Container fluid className="bg-dark">
-        <Row className="text-center">
-          {best.slice(0, 8).map((item, index) => {
-            return (
-              <Col key={index} xs={12} sm={12} md={6} lg={4} xl={3}>
-                <div>
-                  <h2 className="py-5 fs-4 text-white">
-                    {item.restaurant.name}
-                  </h2>
-                  {item.restaurant.featured_image ? (
-                    <Image
-                      style={{ width: "200px", height: "200px" }}
-                      src={item.restaurant.featured_image}
-                      thumbnail
-                    />
-                  ) : (
-                    <Image
-                      style={{ width: "200px", height: "200px" }}
-                      src="https://b.zmtcdn.com/images/res_avatar_476_320_1x_new.png?output-format=webp%22"
-                      className="mb-5"
-                      thumbnail
-                    />
-                  )}
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
-*/

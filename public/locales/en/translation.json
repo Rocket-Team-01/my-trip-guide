@@ -1,5 +1,24 @@
 {
     "greeting": {
       "1" : "Search for Best Restaurants"
+    },
+    "search": {
+      "1" : "Search",
+      "2" : "Categories"
+    },
+    "navbar" : {
+      "1" : "HomePage",
+      "2" : "SignUp",
+      "3" : "Login"
+    },
+    "details" : {
+      "1" : "Phone",
+      "2" : "Details",
+      "3" : "Average cost For Two People",
+      "4" : "Opening Hours",
+      "5" : "Address",
+      "6" : "Close",
+      "7" : "Add to Favorites"
     }
+
 }

@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Row, Col, Container, Image } from "react-bootstrap";
 import "../css/Home.css";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+
 export default function RestaurantCard(props) {
+
+
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [cost, setCost] = useState("");
@@ -35,7 +41,7 @@ export default function RestaurantCard(props) {
                   {item.restaurant.name}
                 </h3>
                 <h6 className="text-dark">
-                  Phone: {item.restaurant.phone_numbers.slice(0, 12)}
+                {t("details.1")} : {item.restaurant.phone_numbers.slice(0, 12)}
                 </h6>
                 <h6 className="text-dark py-1">
                   <span
@@ -78,7 +84,7 @@ export default function RestaurantCard(props) {
                     setAddress(item.restaurant.location.address);
                   }}
                 >
-                  Details
+                  {t("details.2")}
                 </button>
                 <div
                   className="modal fade bd-example-modal-lg"
@@ -106,16 +112,16 @@ export default function RestaurantCard(props) {
                         </button>
                       </div>
                       <div className="modal-body">
-                        Average cost For Two People:{" "}
+                      {t("details.3")}:{" "}
                         <span className="data">
                           {cost} {currency}
                         </span>{" "}
                         <br />
-                        Opening Hours: <span className="data">
+                        {t("details.4")}: <span className="data">
                           {timing}
                         </span>{" "}
                         <br />
-                        Address: <span className="data">{address}</span>
+                        {t("details.5")}: <span className="data">{address}</span>
                       </div>
                       <div className="modal-footer mx-auto">
                         <button
@@ -123,10 +129,10 @@ export default function RestaurantCard(props) {
                           className="btn btn-danger"
                           data-dismiss="modal"
                         >
-                          Close
+                          {t("details.6")}
                         </button>
                         <button type="button" className="btn btn-success">
-                          Add to Favorites
+                        {t("details.7")}
                         </button>
                       </div>
                     </div>

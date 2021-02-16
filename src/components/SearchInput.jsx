@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { InputGroup, Form, FormControl, Button } from "react-bootstrap";
 import CategoriesButton from "./CategoriesButton";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
-function SearchInput() {
+
+function SearchInput(props) {
+
+  const { t } = useTranslation();
+  const categorylang = t("search.2");
+
   const params = useParams();
   const { query, category } = params;
   let history = useHistory();
@@ -29,13 +36,14 @@ function SearchInput() {
         />
         <InputGroup.Append>
           <CategoriesButton
+            categorylang = {categorylang}
             setCategoryName={setCategoryName}
             setCategoryID={setCategoryID}
           />
         </InputGroup.Append>
         <InputGroup.Append>
           <Button variant="dark" type="submit">
-            Search
+          {t("search.1")}
           </Button>
         </InputGroup.Append>
       </InputGroup>

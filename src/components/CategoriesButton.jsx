@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { Dropdown, FormControl, Button } from "react-bootstrap";
 import categories from "../data/categories";
 import "../css/CategoriesButton.css";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+
 function CategoriesButton(props) {
-  const [title, setTitle] = useState("Categories");
+
+  const {categorylang} = props;
+  const { t } = useTranslation();
+
+  const [title, setTitle] = useState(categorylang);
 
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <Button

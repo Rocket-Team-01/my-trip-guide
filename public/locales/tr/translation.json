@@ -1,5 +1,23 @@
 {
     "greeting":{ 
         "1" : "En iyi Restoranları Ara"
+    },
+    "search": {
+      "1" : "Ara",
+      "2" : "Kategoriler"
+    },
+    "navbar" : {
+      "1" : "Anasayfa",
+      "2" : "Kayıt Ol",
+      "3" : "Giriş Yap"
+    },
+    "details" : {
+      "1" : "Tel No",
+      "2" : "Detaylar",
+      "3" : "2 Kişilik Ortalama Hesap Ücreti",
+      "4" : "Açılış-Kapanış Saatleri",
+      "5" : "Adres",
+      "6" : "Kapat",
+      "7" : "Favorilerime Ekle"
     }
 }
