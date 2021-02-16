@@ -12,7 +12,7 @@ function Search(props) {
 
   return (
     <div className="searchback">
-      <Header id="searcheader" />
+      <Header />
       <Row className=" justify-content-center align-items-center m-0 py-5">
         <Col sm={8}>
           <SearchInput query={query} />
