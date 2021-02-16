@@ -1,18 +1,18 @@
 import React, { Suspense } from "react";
 import "./i18next.js";
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-      <Suspense fallback={[<div>loading</div>]}>
-    <App />
-  </Suspense>,
-   
+    <Suspense fallback={[<div key={1} >loading</div>]}>
+      <App />
+    </Suspense>
+    ,
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

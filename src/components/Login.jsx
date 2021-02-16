@@ -26,7 +26,7 @@ export default function App() {
       {" "}
       {menu.map(country => {
         return (
-          <div key={country.name}>
+          <div key={country.id}>
             <h2> {country.name} </h2>
           </div>
         );
