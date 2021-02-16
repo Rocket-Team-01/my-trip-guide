@@ -32,6 +32,13 @@ const pages = [{
         "component": Search,
         "link": "/search/:query",
         "isActive": true
+    },
+    {
+        "title": "Search",
+        "isExact": true,
+        "component": Search,
+        "link": "/search/:query/:category",
+        "isActive": true
     }
 ]
 

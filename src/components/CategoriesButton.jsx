@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dropdown, FormControl, Button } from "react-bootstrap";
 import categories from "../data/categories";
-import '../css/CategoriesButton.css'
+import "../css/CategoriesButton.css";
 function CategoriesButton(props) {
   const [title, setTitle] = useState("Categories");
 
@@ -40,7 +40,6 @@ function CategoriesButton(props) {
           <ul>
             {React.Children.toArray(children).filter(
               (child) =>
-         
                 !value || child.props.children.toLowerCase().startsWith(value)
             )}
           </ul>
@@ -50,23 +49,22 @@ function CategoriesButton(props) {
   );
 
   return (
-    <Dropdown >
+    <Dropdown>
       <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
         {title}
       </Dropdown.Toggle>
-      <Dropdown.Menu className='dropdown-category' as={CustomMenu}>
+      <Dropdown.Menu className="dropdown-category" as={CustomMenu}>
         {categories.map((item, index) => (
           <Dropdown.Item
-            
             key={index}
-            eventKey={item.cuisine_id}
+            eventKey={item.id}
             onSelect={() => {
-              props.setCategoryName(item.cuisine_name);
-              props.setCategoryID(item.cuisine_id);
-              setTitle(item.cuisine_name);
+              props.setCategoryName(item.name);
+              props.setCategoryID(item.id);
+              setTitle(item.name);
             }}
           >
-            {item.cuisine_name}
+            {item.name}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>

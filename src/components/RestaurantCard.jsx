@@ -8,7 +8,7 @@ export default function RestaurantCard(props) {
   const [currency, setCurrency] = useState("");
   const [timing, setTiming] = useState("");
   const [address, setAddress] = useState("");
-
+  console.log('rest card')
   return (
     <div >
       <Container>
