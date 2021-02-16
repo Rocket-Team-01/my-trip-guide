@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { Dropdown, FormControl, Button } from "react-bootstrap";
 import categories from "../data/categories";
 import "../css/CategoriesButton.css";
-import i18next from "i18next";
-import { useTranslation } from "react-i18next";
+import { LanguageContext } from "../context/LanguageContext";
 
+// import {categories} from '../../public/locales/tr/translation.json'
 function CategoriesButton(props) {
+  const languageContextAPI = React.useContext(LanguageContext);
 
-  const {categorylang} = props;
-  const { t } = useTranslation();
+  const [title, setTitle] = useState();
 
-  const [title, setTitle] = useState(categorylang);
+  React.useEffect(() => {
+    setTitle(languageContextAPI.t("search.2"));
+  }, [languageContextAPI]);
 
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <Button
@@ -68,10 +70,10 @@ function CategoriesButton(props) {
             onSelect={() => {
               props.setCategoryName(item.name);
               props.setCategoryID(item.id);
-              setTitle(item.name);
+              setTitle(languageContextAPI.t(`categories.${index}.name`));
             }}
           >
-            {item.name}
+            {languageContextAPI.t(`categories.${index}.name`)}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>

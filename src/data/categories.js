@@ -12,20 +12,12 @@ const categories = [
         name: "Nightlife",
     },
     {
-        id: 4,
-        name: "Catching-up",
-    },
-    {
         id: 5,
         name: "Takeaway",
     },
     {
         id: 6,
         name: "Cafes",
-    },
-    {
-        id: 7,
-        name: "Daily Menus",
     },
     {
         id: 8,

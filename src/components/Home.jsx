@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import "../css/Home.css";
 import Header from "./Header";
 import SearchInput from "./SearchInput";
-import { useTranslation } from "react-i18next";
 import RestaurantCard from "./RestaurantCard";
-import i18next from "i18next";
+import {LanguageContext} from '../context/LanguageContext'
+
 export default function Home(props) {
-  const { t } = useTranslation();
+  const languageContextAPI=React.useContext(LanguageContext)
   const [result, setResult] = useState([]);
   const [city, setCity] = useState("");
 
@@ -46,10 +46,7 @@ export default function Home(props) {
     });
   }, []);
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang);
-    console.log(lang)
-  }
+
   return (
     <div>
       <Container fluid id="home" className="m-0 p-0">
@@ -58,7 +55,7 @@ export default function Home(props) {
         </Row>
         <Row className=" justify-content-center align-items-center m-0 p-0">
           <div className="landing-text text-light mt-5 pt-5">
-            <h1 className="pb-5">{t("greeting.1")}</h1>
+            <h1 className="pb-5">{languageContextAPI.t("greeting.1")}</h1>
             <Row className=" justify-content-center align-items-center m-0 p-0">
               <Col sm={8}>
                 <SearchInput />

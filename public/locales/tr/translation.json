@@ -19,5 +19,52 @@
       "5" : "Adres",
       "6" : "Kapat",
       "7" : "Favorilerime Ekle"
-    }
+    },
+
+    "categories": [
+      {
+        "id": 1,
+        "name": "Teslimat"
+      },
+      {
+        "id": 2,
+        "name": "Dışarıda Yemeye Müsait"
+      },
+      {
+        "id": 3,
+        "name": "Gece Hayatı"
+      },
+      {
+        "id": 5,
+        "name": "Paket servisi"
+      },
+      {
+        "id": 6,
+        "name": "Kafeler"
+      },
+      {
+        "id": 8,
+        "name": "Kahvaltı"
+      },
+      {
+        "id": 9,
+        "name": "Öğle Yemeği"
+      },
+      {
+        "id": 10,
+        "name": "Akşam Yemeği"
+      },
+      {
+        "id": 11,
+        "name": "Barlar"
+      },
+      {
+        "id": 13,
+        "name": "Cep Dostu Teslimat"
+      },
+      {
+        "id": 14,
+        "name": "Kulüpler ve Salonlar"
+      }
+    ]
 }

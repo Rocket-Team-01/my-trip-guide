@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import pages from './data/pages'
+import {Context} from './context/LanguageContext'
 function App() {
   const routeMaps = pages.map((item, index) => (
     <Route
@@ -11,13 +12,13 @@ function App() {
     />
   ));
   return (
-    <div>
+    <Context>
       <BrowserRouter>
         <Switch>
         {routeMaps}
         </Switch>
       </BrowserRouter>
-    </div>
+    </Context>
   );
 }
 

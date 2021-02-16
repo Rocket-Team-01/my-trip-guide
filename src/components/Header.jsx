@@ -2,16 +2,12 @@ import React from "react";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import i18next from "i18next";
-import { useTranslation } from "react-i18next";
+import {LanguageContext} from '../context/LanguageContext'
 
 function Header() {
-  const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang);
-    console.log(lang);
-  }
+  const languageContextAPI=React.useContext(LanguageContext)
+
 
   return (
     <Navbar id="navbar" collapseOnSelect variant="dark" className="fixed-top">
@@ -24,23 +20,23 @@ function Header() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto">
           <Link className="nav-link" to="/">
-          {t("navbar.1")}
+          {languageContextAPI.t("navbar.1")}
           </Link>
           <Link className="nav-link" to="/signup">
-          {t("navbar.2")}
+          {languageContextAPI.t("navbar.2")}
           </Link>
           <Link className="nav-link" to="/login">
-          {t("navbar.3")}
+          {languageContextAPI.t("navbar.3")}
           </Link>
           <Button
             className="mx-2 btn btn-primary btn-sm"
-            onClick={() => handleClick("en")}
+            onClick={() => languageContextAPI.handleClick("en")}
           >
             Eng
           </Button>
           <Button
             className="mx-2 btn btn-primary btn-sm"
-            onClick={() => handleClick("tr")}
+            onClick={() => languageContextAPI.handleClick("tr")}
           >
             TR
           </Button>
