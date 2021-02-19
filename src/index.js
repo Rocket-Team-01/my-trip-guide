@@ -6,11 +6,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Suspense fallback={[<div key={1} >loading</div>]}>
-      <App />
-    </Suspense>
-  </React.StrictMode>,
+  <Suspense fallback={[<div key={1}>loading</div>]}>
+    <App />
+  </Suspense>,
   document.getElementById("root")
 );
 

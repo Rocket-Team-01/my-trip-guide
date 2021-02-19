@@ -1,40 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-#home{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg') no-repeat center center fixed;
-    display: table;
-    height:100vh;
-    position: relative;
-    background-size: cover;
-    -webkit-background-size : cover;
-    -moz-background-size: cover;
-  }
-
-.landing-text {
-display: table-cell;
-text-align: center;
-vertical-align: middle;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg")
+      no-repeat center center fixed;
+  display: table;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
 }
 
-.underline{
+.landing-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.underline {
   text-decoration: underline;
 }
 
 .input-search {
   height: 8vh;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(255, 255, 255);
   opacity: 1; /* Firefox */
 }
-#navbar{
+#navbar {
   background-color: rgba(92, 92, 92, 0.507) !important;
 }
 
-.searchback{
-  background-color:white;
-  font-family: 'Libre Baskerville', serif;
+.searchback {
+  background-color: white;
+  font-family: "Libre Baskerville", serif;
 }
 
-.data{
+.data {
   font-size: 1rem;
+}
+
+.card {
+  background: #fff;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+.image {
+  float: left;
+  background: #000;
+  width: 25%;
+  height: 150px;
+}
+
+.content {
+  float: left;
+  height: 140px;
+  width: 73%;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.content h4 {
+  margin: 5px 0;
 }
