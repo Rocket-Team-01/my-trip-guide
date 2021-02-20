@@ -4,9 +4,9 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg")
       no-repeat center center fixed;
-  display: table;
+  /* display: table; */
   height: 100vh;
-  position: relative;
+  /* position: relative; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,9 +14,9 @@
 }
 
 .landing-text {
-  display: table-cell;
+  /* display: table-cell; */
   text-align: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .underline {
@@ -42,4 +42,7 @@
 
 .data {
   font-size: 1rem;
+}
+.input-search{
+  width: 15rem ;
 }

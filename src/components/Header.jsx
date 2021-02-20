@@ -1,17 +1,26 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LanguageContext } from "../context/LanguageContext";
 import "../css/Navbar.css";
-
+import { useParams } from "react-router-dom";
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
+  const params = useParams();
+  const [background,setBackground]=React.useState('')
+  const { query } = params;
+  console.log(`params : ${query}`)
 
   const [lang, setLang] = React.useState("Choose");
 
+  React.useEffect(() => {
+    query !== undefined ? setBackground('navbarBorderr') : setBackground('navbarBorder')
+    console.log(background)
+  }, []);
+
   return (
-    <Navbar collapseOnSelect expand="lg" className=" navbarBorder">
+    <Navbar collapseOnSelect expand="lg" className={background}>
       <Navbar.Brand className="py-3">
         <Link className="text-white navbar-logo ml-5" to="/">
           Restaurant Searcher
@@ -37,8 +46,7 @@ function Header() {
                 {lang}
               </button>
               <div className="dropdown-menu">
-                <Link
-                  to="/"
+                <Button
                   className="dropdown-item"
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
@@ -47,9 +55,8 @@ function Header() {
                   }}
                 >
                   TR
-                </Link>
-                <Link
-                  to="/"
+                </Button>
+                <Button
                   className="dropdown-item"
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
@@ -58,7 +65,7 @@ function Header() {
                   }}
                 >
                   Eng
-                </Link>
+                </Button>
               </div>
             </div>
           </div>

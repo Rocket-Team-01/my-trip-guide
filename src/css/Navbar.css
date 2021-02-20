@@ -1,3 +1,11 @@
 .navbarBorder {
   border: 1px solid rgba(133, 133, 133, 0.4);
+  position:absolute;
+  width:100%
+}
+.navbarBorderr{
+  background-color: rgb(10, 45, 56) !important;
+  border: 1px solid rgba(133, 133, 133, 0.4);
+  width:100%
+
 }

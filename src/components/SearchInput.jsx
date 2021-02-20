@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { InputGroup, Form, FormControl, Button } from "react-bootstrap";
+import {
+  InputGroup,
+  Form,
+  FormControl,
+  Button,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 import CategoriesButton from "./CategoriesButton";
 import { useTranslation } from "react-i18next";
-
+import '../css/Home.css'
 
 function SearchInput(props) {
-
   const { t } = useTranslation();
   const categorylang = t("search.2");
 
@@ -24,30 +31,35 @@ function SearchInput(props) {
       : history.push(`/search/${value}`);
   }
   return (
-    <div>
-      <InputGroup className="m-0 p-0" as={Form} onSubmit={handleSubmit}>
-        <FormControl
-          required
-          className="input-search m-0 p-2"
-          placeholder={query}
-          onChange={(event) => {
-            setValue(event.target.value);
-          }}
-        />
-        <InputGroup.Append>
-          <CategoriesButton
-            categorylang = {categorylang}
-            setCategoryName={setCategoryName}
-            setCategoryID={setCategoryID}
-          />
-        </InputGroup.Append>
-        <InputGroup.Append>
-          <Button variant="dark" type="submit">
-          {t("search.1")}
-          </Button>
-        </InputGroup.Append>
-      </InputGroup>
-    </div>
+    <Container>
+      <Row className=" mx-auto justify-content-center align-items-center mt-4 ">
+        <InputGroup className="text-center input-search" as={Form} onSubmit={handleSubmit}>
+          <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
+            <FormControl
+              required
+              className=" w-100 h-100 "
+              placeholder={query}
+              onChange={(event) => {
+                setValue(event.target.value);
+              }}
+              
+            />
+          </Col>
+          <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
+            <InputGroup.Append>
+              <CategoriesButton
+                categorylang={categorylang}
+                setCategoryName={setCategoryName}
+                setCategoryID={setCategoryID}
+              />
+              <Button variant="dark" type="submit" className="w-100">
+                {t("search.1")}
+              </Button>
+            </InputGroup.Append>
+          </Col>
+        </InputGroup>
+      </Row>
+    </Container>
   );
 }
 
