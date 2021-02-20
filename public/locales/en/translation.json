@@ -27,10 +27,6 @@
       "name": "Delivery"
     },
     {
-      "id": 2,
-      "name": "Dine-out"
-    },
-    {
       "id": 3,
       "name": "Nightlife"
     },
@@ -56,15 +52,7 @@
     },
     {
       "id": 11,
-      "name": "Pubs & Bars"
-    },
-    {
-      "id": 13,
-      "name": "Pocket Friendly Delivery"
-    },
-    {
-      "id": 14,
-      "name": "Clubs & Lounges"
+      "name": "Bars"
     }
   ]
 }

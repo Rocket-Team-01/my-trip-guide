@@ -55,7 +55,7 @@ export default function Home(props) {
         <Row className=" m-0 p-0 align-items-center h-100">
           <div className="landing-text text-light ">
             <h1 className="">{languageContextAPI.t("greeting.1")}</h1>
-            <Row className="w-50 mx-auto">
+            <Row className=" mx-auto">
               <Col sm={12}>
                 <SearchInput />
               </Col>

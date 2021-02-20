@@ -23,9 +23,6 @@
   text-decoration: underline;
 }
 
-.input-search {
-  height: 8vh;
-}
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(255, 255, 255);
@@ -43,6 +40,11 @@
 .data {
   font-size: 1rem;
 }
-.input-search{
-  width: 15rem ;
+.formw {
+  min-width: 12.3rem !important;
+  margin: 0 auto !important;
+}
+
+.input-search {
+  max-width: 35rem !important;
 }

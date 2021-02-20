@@ -8,15 +8,17 @@ import { useParams } from "react-router-dom";
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
   const params = useParams();
-  const [background,setBackground]=React.useState('')
+  const [background, setBackground] = React.useState("");
   const { query } = params;
-  console.log(`params : ${query}`)
+  console.log(`params : ${query}`);
 
   const [lang, setLang] = React.useState("Choose");
 
   React.useEffect(() => {
-    query !== undefined ? setBackground('navbarBorderr') : setBackground('navbarBorder')
-    console.log(background)
+    query === undefined
+      ? setBackground("navbarBorderr")
+      : setBackground("navbarBorderr");
+    console.log(background);
   }, []);
 
   return (

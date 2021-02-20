@@ -27,10 +27,6 @@
         "name": "Teslimat"
       },
       {
-        "id": 2,
-        "name": "Dışarıda Yemeye Müsait"
-      },
-      {
         "id": 3,
         "name": "Gece Hayatı"
       },
@@ -57,14 +53,6 @@
       {
         "id": 11,
         "name": "Barlar"
-      },
-      {
-        "id": 13,
-        "name": "Cep Dostu Teslimat"
-      },
-      {
-        "id": 14,
-        "name": "Kulüpler ve Salonlar"
       }
     ]
 }

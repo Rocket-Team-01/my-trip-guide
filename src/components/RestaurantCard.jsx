@@ -18,7 +18,7 @@ export default function RestaurantCard(props) {
       <Row className="pb-5 justify-content-center">
         {props.cityRest.map((item, index) => (
           <React.Fragment key={index}>
-            <Col xs={12} sm={6} md={6} lg={3} xl={3} className=" pb-3 mx-auto">
+            <Col xs={12} sm={6} md={6} lg={3} xl={3} className="pb-3 mx-auto">
               {item.restaurant.featured_image ? (
                 <Image
                   className="my-3  rounded-3 border border-dark"
@@ -34,7 +34,7 @@ export default function RestaurantCard(props) {
               )}
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} xl={3}>
-              <h3 className="text-dark fs-5 font-weight-bold">
+              <h3 className="text-dark fs-5 font-weight-bold pt-3">
                 {item.restaurant.name}
               </h3>
               <h6 className="text-dark">
