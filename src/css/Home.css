@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 #home {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg")
@@ -9,6 +10,7 @@
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  font-family: "Open Sans", sans-serif;
 }
 
 .landing-text {
@@ -40,29 +42,4 @@
 
 .data {
   font-size: 1rem;
-}
-
-.card {
-  background: #fff;
-  display: inline-block;
-  border: 1px solid #ddd;
-}
-
-.image {
-  float: left;
-  background: #000;
-  width: 25%;
-  height: 150px;
-}
-
-.content {
-  float: left;
-  height: 140px;
-  width: 73%;
-  overflow: hidden;
-  padding: 5px;
-}
-
-.content h4 {
-  margin: 5px 0;
 }

@@ -5,10 +5,10 @@ import "../css/Home.css";
 import Header from "./Header";
 import SearchInput from "./SearchInput";
 import RestaurantCard from "./RestaurantCard";
-import {LanguageContext} from '../context/LanguageContext'
+import { LanguageContext } from "../context/LanguageContext";
 
 export default function Home(props) {
-  const languageContextAPI=React.useContext(LanguageContext)
+  const languageContextAPI = React.useContext(LanguageContext);
   const [result, setResult] = useState([]);
   const [city, setCity] = useState("");
 
@@ -46,18 +46,17 @@ export default function Home(props) {
     });
   }, []);
 
-
   return (
     <div>
       <Container fluid id="home" className="m-0 p-0">
         <Row className="m-0 p-0 ">
           <Header />
         </Row>
-        <Row className=" justify-content-center align-items-center m-0 p-0">
-          <div className="landing-text text-light mt-5 pt-5">
-            <h1 className="pb-5">{languageContextAPI.t("greeting.1")}</h1>
-            <Row className=" justify-content-center align-items-center m-0 p-0">
-              <Col sm={8}>
+        <Row className=" m-0 p-0">
+          <div className="landing-text text-light ">
+            <h1 className="">{languageContextAPI.t("greeting.1")}</h1>
+            <Row className="w-50 mx-auto">
+              <Col sm={12}>
                 <SearchInput />
               </Col>
             </Row>
@@ -81,4 +80,3 @@ export default function Home(props) {
     </div>
   );
 }
-
