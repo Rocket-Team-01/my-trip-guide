@@ -2,7 +2,7 @@ import Home from "../components/Home"
 import SignUp from "../components/SignUp"
 import Login from "../components/Login"
 import Search from "../components/Search"
-
+import Contact from "../components/Contact"
 
 
 const pages = [{
@@ -38,6 +38,13 @@ const pages = [{
         "isExact": true,
         "component": Search,
         "link": "/search/:query/:category",
+        "isActive": true
+    },
+    {
+        "title": "Contact",
+        "isExact": true,
+        "component": Contact,
+        "link": "/contact",
         "isActive": true
     }
 ]
