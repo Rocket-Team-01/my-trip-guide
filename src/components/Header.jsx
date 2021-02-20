@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LanguageContext } from "../context/LanguageContext";
 import "../css/Navbar.css";
-import { useParams } from "react-router-dom";
+import { useLocation  } from "react-router-dom";
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
-  const params = useParams();
   const [background, setBackground] = React.useState("");
-  const { query } = params;
-  console.log(`params : ${query}`);
+  let location = useLocation();
+
+  const { pathname } = location;
+  console.log(`location : ${pathname}`)
 
   const [lang, setLang] = React.useState("Choose");
-
   React.useEffect(() => {
-    query === undefined
-      ? setBackground("navbarBorderr")
+    pathname === '/'
+      ? setBackground("navbarBorder")
       : setBackground("navbarBorderr");
     console.log(background);
-  }, []);
+  }, [pathname,background]);
 
   return (
     <Navbar collapseOnSelect expand="lg" className={background}>
