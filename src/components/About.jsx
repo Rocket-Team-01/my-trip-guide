@@ -59,7 +59,7 @@ export default function About() {
         <Row className="d-flex justify-content-center ">
           <Col md={4} className="mt-5 mb-5">
             <Zoom>
-              <Card className="bg-dark text-white ">
+              <Card className="bg-dark text-white grow ">
                 <Card.Img
                   src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                   alt="Card image"
