@@ -6,12 +6,17 @@ const LanguageContext = React.createContext();
 
 function Context(props) {
   const { t } = useTranslation();
+  const [lang, setLang] = React.useState("Choose");
 
   function handleClick(lang) {
     i18next.changeLanguage(lang);
   }
+  React.useEffect(() => {
+    setLang("English")
+    i18next.changeLanguage('en')
+  },[])
   return (
-    <LanguageContext.Provider value={{ t, handleClick }}>
+    <LanguageContext.Provider value={{ t, handleClick,setLang,lang }}>
       {props.children}
     </LanguageContext.Provider>
   );

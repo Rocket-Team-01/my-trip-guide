@@ -13,7 +13,6 @@ function Header() {
   const { pathname } = location;
   console.log(`location : ${pathname}`)
 
-  const [lang, setLang] = React.useState("Choose");
   React.useEffect(() => {
     pathname === '/'
       ? setBackground("navbarBorder")
@@ -45,7 +44,7 @@ function Header() {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                {lang}
+                {languageContextAPI.lang}
               </button>
               <div className="dropdown-menu">
                 <Button
@@ -53,7 +52,7 @@ function Header() {
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
                     languageContextAPI.handleClick("tr");
-                    setLang("Türkçe");
+                    languageContextAPI.setLang("Türkçe");
                   }}
                 >
                   TR
@@ -63,7 +62,7 @@ function Header() {
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
                     languageContextAPI.handleClick("en");
-                    setLang("English");
+                    languageContextAPI.setLang("English");
                   }}
                 >
                   Eng
