@@ -1,0 +1,10 @@
+.cont50{
+    height:50vh;
+    
+}
+#tsparticles{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

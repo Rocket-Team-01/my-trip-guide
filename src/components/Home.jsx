@@ -52,7 +52,7 @@ export default function Home(props) {
         <Row className="m-0 p-0 ">
           <Header />
         </Row>
-        <Row className=" m-0 p-0 align-items-center h-100">
+        <Row className=" m-0 p-0 align-items-center h-100 ">
           <div className="landing-text text-light ">
             <h1 className="">{languageContextAPI.t("greeting.1")}</h1>
             <Row className=" mx-auto">
