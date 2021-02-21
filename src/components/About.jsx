@@ -45,7 +45,7 @@ export default function About() {
                   <Card.Title>Proje Yapılış Nedeni</Card.Title>
                   <Row className="h-75 d-flex align-items-end">
                     <Card.Text>
-                      Proje Kodluyoruz himayesinde yapılan Adana Full Stack WeB
+                      Proje Kodluyoruz himayesinde yapılan Adana Full Stack Web
                       Development kurusunun bitirme ödevidir. Ancak takım
                       arkadaşları olarak bunu bir ödev olarak değil kendimizi
                       geliştirmek için fırsat olarak gördük.
