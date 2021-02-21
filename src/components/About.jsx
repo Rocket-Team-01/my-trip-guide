@@ -8,9 +8,9 @@ export default function About() {
   return (
     <div >
       
-      <Container fluid className="main-color   full-heigth  ">
+      <Container fluid className="main-color   full-height  ">
       
-          <Row>
+      <Row>
           <Header />
           </Row>
       
