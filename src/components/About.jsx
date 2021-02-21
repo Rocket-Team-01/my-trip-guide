@@ -6,13 +6,15 @@ import Header from "./Header";
 import Zoom from "react-reveal/Zoom";
 export default function About() {
   return (
-    <div className="h-100">
-      <Header />
-      <Container fluid className="main-color full-height   ">
+    <div >
       
-          
+      <Container fluid className="main-color   full-heigth  ">
       
-        <Row className=" full-height d-flex self-align-center d-flex justify-content-center">
+          <Row>
+          <Header />
+          </Row>
+      
+        <Row className=" mh-100 h-100 d-flex justify-content-center d-flex align-items-center">
           <Col  lg={4} md={8} xs={12} sm={8} className="mt-5">
             <Zoom>
               <Card className="bg-dark text-white grow">
@@ -56,7 +58,7 @@ export default function About() {
               </Card>
             </Zoom>
           </Col>
-          <Col lg={4} md={8} sm={8} xs={12} className="mt-5 mb-5">
+          <Col lg={4} md={8} xs={12} sm={8} className="mt-5">
             <Zoom>
               <Card className="bg-dark text-white grow ">
                 <Card.Img
