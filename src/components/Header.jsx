@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Button } from "react-bootstrap";
+import { Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LanguageContext } from "../context/LanguageContext";
@@ -30,6 +30,16 @@ function Header() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto mr-5">
+         
+          <Link className="nav-link text-white mr-2" to="/">
+            {languageContextAPI.t("navbar.1")}
+          </Link>
+          <Link className="nav-link text-white mr-2" to="/contact">
+            {languageContextAPI.t("navbar.2")}
+          </Link>
+          <Link className="nav-link text-white mr-2" to="/about">
+            {languageContextAPI.t("navbar.3")}
+          </Link>
           <div
             className="btn-group"
             role="group"
@@ -46,7 +56,8 @@ function Header() {
               >
                 {languageContextAPI.lang}
               </button>
-              <div className="dropdown-menu">
+              <div className="dropdown-menu"
+>     
                 <Button
                   className="dropdown-item"
                   aria-labelledby="btnGroupDrop1"
@@ -70,15 +81,6 @@ function Header() {
               </div>
             </div>
           </div>
-          <Link className="nav-link text-white mr-2" to="/">
-            {languageContextAPI.t("navbar.1")}
-          </Link>
-          <Link className="nav-link text-white mr-2" to="/contact">
-            {languageContextAPI.t("navbar.2")}
-          </Link>
-          <Link className="nav-link text-white mr-2" to="/about">
-            {languageContextAPI.t("navbar.3")}
-          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
