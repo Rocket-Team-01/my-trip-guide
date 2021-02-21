@@ -31,8 +31,6 @@ export default function About() {
               </Card>
             </Zoom>
           </Col>
-        </Row>
-        <Row className="d-flex justify-content-center ">
           <Col md={4} className="mt-5">
             <Zoom>
               <Card className="bg-dark text-white grow ">
@@ -55,8 +53,6 @@ export default function About() {
               </Card>
             </Zoom>
           </Col>
-        </Row>
-        <Row className="d-flex justify-content-center ">
           <Col md={4} className="mt-5 mb-5">
             <Zoom>
               <Card className="bg-dark text-white grow ">
@@ -81,6 +77,7 @@ export default function About() {
             </Zoom>
           </Col>
         </Row>
+        
       </Container>
     </div>
   );
