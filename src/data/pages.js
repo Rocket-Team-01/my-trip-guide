@@ -3,7 +3,7 @@ import SignUp from "../components/SignUp"
 import Login from "../components/Login"
 import Search from "../components/Search"
 import Contact from "../components/Contact"
-
+import About from "../components/About"
 
 const pages = [{
         "title": "Home",
@@ -45,6 +45,13 @@ const pages = [{
         "isExact": true,
         "component": Contact,
         "link": "/contact",
+        "isActive": true
+    },
+    {
+        "title": "About",
+        "isExact": true,
+        "component": About,
+        "link": "/about",
         "isActive": true
     }
 ]

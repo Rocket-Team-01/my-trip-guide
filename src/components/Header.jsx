@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LanguageContext } from "../context/LanguageContext";
 import "../css/Navbar.css";
-import { useLocation  } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
   const [background, setBackground] = React.useState("");
   let location = useLocation();
 
   const { pathname } = location;
-  console.log(`location : ${pathname}`)
+  console.log(`location : ${pathname}`);
 
   React.useEffect(() => {
-    pathname === '/'
+    pathname === "/"
       ? setBackground("navbarBorder")
       : setBackground("navbarBorderr");
     console.log(background);
-  }, [pathname,background]);
+  }, [pathname, background]);
 
   return (
     <Navbar collapseOnSelect expand="lg" className={background}>
@@ -76,7 +76,7 @@ function Header() {
           <Link className="nav-link text-white mr-2" to="/contact">
             {languageContextAPI.t("navbar.2")}
           </Link>
-          <Link className="nav-link text-white mr-2" to="/login">
+          <Link className="nav-link text-white mr-2" to="/about">
             {languageContextAPI.t("navbar.3")}
           </Link>
         </Nav>

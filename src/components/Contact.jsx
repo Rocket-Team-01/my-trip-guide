@@ -94,8 +94,8 @@ export default function Contact() {
           <Header />
         </Row>
 
-        <Row className=" m-0 p-0 align-items-center h-100 mt-5   ">
-          <Col sm={4} className="mb-3">
+        <Row className=" m-0 p-0 align-items-center h-100 mt-5 mb-3   ">
+          <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
             <Card className>
               <Row className="mt-3">
                 <Card.Img
@@ -152,7 +152,7 @@ export default function Contact() {
               </Row>
             </Card>
           </Col>
-          <Col md={4} className="mb-3">
+          <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
             <Card className>
               <Row className="mt-3">
                 <Card.Img
@@ -164,7 +164,7 @@ export default function Contact() {
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-              <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={3} sm={3} md={3} className="text-info">
                   <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +209,7 @@ export default function Contact() {
               </Row>
             </Card>
           </Col>
-          <Col sm={4} className="mb-3">
+          <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
             <Card className>
               <Row className="mt-3">
                 <Card.Img
@@ -221,7 +221,7 @@ export default function Contact() {
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-              <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={3} sm={3} md={3} className="text-info">
                   <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +235,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={3} sm={3} md={3} className="text-info ">
                   <a href="https://github.com/alisaid1gunes">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +249,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={3} sm={3} md={3} className="text-info ">
                   <a href="mailto: alisaid1gunes@gmail.com">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
