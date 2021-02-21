@@ -1,0 +1,9 @@
+.main-color {
+  background-color: #0a2e38;
+}
+.full-height {
+  height: 100%;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+  

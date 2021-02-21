@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import ParticlesBg from "particles-bg";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-tsparticles";
 import "../css/Contact.css";
