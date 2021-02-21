@@ -16,15 +16,17 @@ export default function About() {
                 <Card.Img
                   src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                   alt="Card image"
+                  className="img"
                 />
-                <Card.ImgOverlay>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </Card.Text>
-                  <Card.Text>Last updated 3 mins ago</Card.Text>
+                <Card.ImgOverlay className="h-75 ">
+                  <Card.Title>Proje Kapsamı</Card.Title>
+                  <Row className="h-75 d-flex align-items-end">
+                    <Card.Text>
+                      Bu proje kapsamında anasayfa içeriği kullanıcının konumuna
+                      göre yakın restoranlardan oluşmaktadır. Arama kısmında ise
+                      aranan şehirdeki restoranlar gösterilecektir.
+                    </Card.Text>
+                  </Row>
                 </Card.ImgOverlay>
               </Card>
             </Zoom>
@@ -32,20 +34,23 @@ export default function About() {
         </Row>
         <Row className="d-flex justify-content-center ">
           <Col md={4} className="mt-5">
-          <Zoom>
-              <Card className="bg-dark text-white grow">
+            <Zoom>
+              <Card className="bg-dark text-white grow ">
                 <Card.Img
                   src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                   alt="Card image"
+                  className="img"
                 />
-                <Card.ImgOverlay>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </Card.Text>
-                  <Card.Text>Last updated 3 mins ago</Card.Text>
+                <Card.ImgOverlay className="h-75 ">
+                  <Card.Title>Proje Yapılış Nedeni</Card.Title>
+                  <Row className="h-75 d-flex align-items-end">
+                    <Card.Text>
+                      Proje Kodluyoruz himayesinde yapılan Adana Full Stack WeB
+                      Development kurusunun bitirme ödevidir. Ancak takım
+                      arkadaşları olarak bunu bir ödev olarak değil kendimizi
+                      geliştirmek için fırsat olarak gördük.
+                    </Card.Text>
+                  </Row>
                 </Card.ImgOverlay>
               </Card>
             </Zoom>
@@ -53,20 +58,24 @@ export default function About() {
         </Row>
         <Row className="d-flex justify-content-center ">
           <Col md={4} className="mt-5 mb-5">
-          <Zoom>
-              <Card className="bg-dark text-white grow">
+            <Zoom>
+              <Card className="bg-dark text-white ">
                 <Card.Img
                   src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                   alt="Card image"
+                  className="img"
                 />
-                <Card.ImgOverlay>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </Card.Text>
-                  <Card.Text>Last updated 3 mins ago</Card.Text>
+
+                <Card.ImgOverlay className="h-75 ">
+                  <Card.Title>Projenin Bize Kattıkları</Card.Title>
+                  <Row className="h-75 d-flex align-items-end">
+                    <Card.Text>
+                      Proje yaparken teknik anlamda kursta öğrendiğimiz konuları
+                      pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp
+                      doküman okumayı, araştırma yapmayı ve takım oyununun
+                      inceliklerini keşfettik.
+                    </Card.Text>
+                  </Row>
                 </Card.ImgOverlay>
               </Card>
             </Zoom>
