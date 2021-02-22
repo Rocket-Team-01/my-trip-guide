@@ -8,8 +8,8 @@ export default function About() {
   return (
     <div>
       <Header />
-      <Container fluid>
-        <Row className="d-flex justify-content-center d-flex align-items-center">
+      <Container fluid className="full-height">
+        <Row className=" h-100 d-flex justify-content-center d-flex align-items-center">
           <Col lg={4} md={8} xs={12} sm={8} className="mt-5">
             <Zoom>
               <Card className="bg-dark text-white grow">
