@@ -94,16 +94,17 @@ export default function Contact() {
           <Header />
         </Row>
 
-        <Row className=" m-0 p-0 align-items-center h-100 mt-5 mb-3   ">
+        <Row className=" m-0 p-0 d-flex align-items-center h-100 mt-5 mb-3   ">
           <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
-            <Card className>
-              <Row className="mt-3">
+            <Card>
+              <Row className="mt-3 w-100 d-flex justify-content-center">
+                
                 <Card.Img
                   className="img-fluid w-50  rounded-circle mx-auto d-block"
                   src="https://pbs.twimg.com/profile_images/1181475356060073984/EX0DJS_1_400x400.jpg"
                 />
               </Row>
-              <Row className="mx-auto d-block mt-2">
+              <Row className=" w-100 text-center  mt-2">
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
@@ -153,14 +154,15 @@ export default function Contact() {
             </Card>
           </Col>
           <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
-            <Card className>
-              <Row className="mt-3">
+            <Card>
+              <Row className="mt-3 w-100 d-flex justify-content-center">
+                
                 <Card.Img
                   className="img-fluid w-50  rounded-circle mx-auto d-block"
                   src="https://pbs.twimg.com/profile_images/1181475356060073984/EX0DJS_1_400x400.jpg"
                 />
               </Row>
-              <Row className="mx-auto d-block mt-2">
+              <Row className=" w-100 text-center  mt-2">
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
@@ -210,14 +212,15 @@ export default function Contact() {
             </Card>
           </Col>
           <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
-            <Card className>
-              <Row className="mt-3">
+            <Card>
+              <Row className="mt-3 w-100 d-flex justify-content-center">
+                
                 <Card.Img
                   className="img-fluid w-50  rounded-circle mx-auto d-block"
                   src="https://pbs.twimg.com/profile_images/1181475356060073984/EX0DJS_1_400x400.jpg"
                 />
               </Row>
-              <Row className="mx-auto d-block mt-2">
+              <Row className=" w-100 text-center  mt-2">
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
@@ -235,7 +238,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info ">
+                <Col xs={3} sm={3} md={3} className="text-info">
                   <a href="https://github.com/alisaid1gunes">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +252,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info ">
+                <Col xs={3} sm={3} md={3} className="text-info">
                   <a href="mailto: alisaid1gunes@gmail.com">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
