@@ -16,5 +16,5 @@ body,
 #app,
 #app > div {
   height: 100%;
-  background-color: rgb(10, 46, 56);
+  background-color: rgba(37, 81, 94, 0);
 }

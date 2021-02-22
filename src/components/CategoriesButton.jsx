@@ -17,6 +17,7 @@ function CategoriesButton(props) {
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <Button
       variant="danger"
+      className='category-button category-round'
       ref={ref}
       onClick={(e) => {
         e.preventDefault();
@@ -39,30 +40,23 @@ function CategoriesButton(props) {
           className={className}
           aria-labelledby={labeledBy}
         >
-          <FormControl
-            autoFocus
-            className="mx-3 my-2 w-auto"
-            placeholder="Type to filter..."
-            onChange={(e) => setValue(e.target.value.toLowerCase())}
-            value={value}
-          />
-          <ul>
+  
             {React.Children.toArray(children).filter(
               (child) =>
                 !value || child.props.children.toLowerCase().startsWith(value)
             )}
-          </ul>
+         
         </div>
       );
     }
   );
 
   return (
-    <Dropdown>
-      <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+    <Dropdown >
+      <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components"   >
         {title}
       </Dropdown.Toggle>
-      <Dropdown.Menu className="dropdown-category" as={CustomMenu}>
+      <Dropdown.Menu className="dropdown-category " as={CustomMenu}>
         {categories.map((item, index) => (
           <Dropdown.Item
             key={index}
@@ -73,6 +67,9 @@ function CategoriesButton(props) {
               setTitle(languageContextAPI.t(`categories.${index}.name`));
             }}
           >
+            <span className='pr-3'>
+            {item.icon} 
+            </span>
             {languageContextAPI.t(`categories.${index}.name`)}
           </Dropdown.Item>
         ))}

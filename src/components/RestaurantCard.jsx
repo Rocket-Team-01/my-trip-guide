@@ -74,7 +74,7 @@ export default function RestaurantCard(props) {
                 </svg>
                 <button
                   type="button"
-                  className="btn btn-primary ml-2 mb-1"
+                  className="btn btn-primary ml-2 mb-1 "
                   data-toggle="modal"
                   data-target=".bd-example-modal-lg"
                   onClick={() => {

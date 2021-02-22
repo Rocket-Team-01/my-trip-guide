@@ -20,7 +20,9 @@
     "6": "Close",
     "7": "Add to Favorites"
   },
-
+  "placeholder":{
+ "1":"type to filter..."
+  },
   "categories": [
     {
       "id": 1,
@@ -55,4 +57,5 @@
       "name": "Bars"
     }
   ]
+
 }

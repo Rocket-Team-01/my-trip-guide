@@ -11,7 +11,7 @@ function Search(props) {
   const { query, category } = params;
 
   return (
-    <div className="searchback">
+    <div className="resback">
       <Header />
       <Row className=" justify-content-center align-items-center m-0 py-5">
         <Col sm={8}>

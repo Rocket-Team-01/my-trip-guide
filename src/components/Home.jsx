@@ -54,12 +54,12 @@ export default function Home(props) {
           <Header />
         </Row>
         <Row className=" m-0 p-0 align-items-center h-100 ">
-          <div className="landing-text text-light ">
-            <h1 className="title">{languageContextAPI.t("greeting.1")}</h1>
-            <Row className=" mx-auto">
-              <Col sm={12}>
+          <div className="landing-text text-light  ">
+            <h1 className="title pt-5 ">{languageContextAPI.t("greeting.1")}</h1>
+            <Row className="searchinput mx-auto p-0 m-0">
+              
                 <SearchInput />
-              </Col>
+
             </Row>
           </div>
         </Row>
@@ -70,8 +70,8 @@ export default function Home(props) {
             The Most Popular Restaurants in <br /> {city}
           </h6>
           <Container fluid className="resback">
-            <Row>
-              <FetchRestaurant query={city} />
+            <Row >
+              <FetchRestaurant query={city} category={''} />
             </Row>
           </Container>
         </>

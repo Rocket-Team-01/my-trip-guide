@@ -32,20 +32,20 @@ function SearchInput(props) {
   }
   return (
     <Container>
-      <Row className="  justify-content-center align-items-center mt-4 ">
+      <Row className="text-center  justify-content-center align-items-center mt-4 ">
         <InputGroup
-          className="text-center input-search mx-auto"
+          className="text-center justify-content-center mx-auto pt-4 "
           as={Form}
           onSubmit={handleSubmit}
         >
           <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
-            <div className="input-group ">
+          <InputGroup.Append> 
               <span
-                className="input-group-text border-0 iconbg searchbar"
+                className="input-group-text border-0 iconbg searchbar m-0 p-0"
                 id="search-addon"
               >
-                <i class="fas fa-map-marker-alt icon"></i>
-              </span>
+                <i className="fas fa-map-marker-alt icon"></i>
+             
               <input
                 required
                 type="search"
@@ -57,25 +57,29 @@ function SearchInput(props) {
                 }}
                 aria-describedby="search-addon"
               />
-            </div>
+             </span>
+          </InputGroup.Append> 
           </Col>
           <Col className="p-0 " lg={6} xs={12} sm={12} md={6} xl={6}>
-            <InputGroup.Append>
+          <InputGroup.Append> 
+          <div className="btn-group search-btn-group mx-0" role="group" >
               <CategoriesButton
                 categorylang={categorylang}
                 setCategoryName={setCategoryName}
                 setCategoryID={setCategoryID}
-                className=" rounded-0 buttonround"
+                className=" rounded-0 button-round btn"
               />
               <Button
-                variant="dark"
+               
                 type="submit"
-                className="w-100 button-round"
+                className="w-100 button-round btn"
               >
                 {t("search.1")}
               </Button>
-            </InputGroup.Append>
+              </div>
+              </InputGroup.Append>
           </Col>
+        
         </InputGroup>
       </Row>
     </Container>
