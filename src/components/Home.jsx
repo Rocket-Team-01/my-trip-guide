@@ -54,7 +54,7 @@ export default function Home(props) {
         </Row>
         <Row className=" m-0 p-0 align-items-center h-100 ">
           <div className="landing-text text-light ">
-            <h1 className="">{languageContextAPI.t("greeting.1")}</h1>
+            <h1 className="title">{languageContextAPI.t("greeting.1")}</h1>
             <Row className=" mx-auto">
               <Col sm={12}>
                 <SearchInput />
@@ -65,18 +65,18 @@ export default function Home(props) {
       </Container>
       {city ? (
         <>
-          <h1 className="text-center py-5 bg-light ">
+          <h6 className="text-center py-5 bg-light m-0 minititle ">
             The Most Popular Restaurants in <br /> {city}
-          </h1>
-          <Container fluid className="bg-white">
+          </h6>
+          <Container fluid className="bg-white resback">
             <Row>
               <RestaurantCard cityRest={result} />
             </Row>
           </Container>
         </>
       ) : (
-          ""
-        )}
+        ""
+      )}
     </div>
   );
 }

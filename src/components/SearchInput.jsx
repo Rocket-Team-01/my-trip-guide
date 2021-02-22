@@ -39,14 +39,22 @@ function SearchInput(props) {
           onSubmit={handleSubmit}
         >
           <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
-            <FormControl
-              required
-              className="h-100 formw mx-auto"
-              placeholder={query}
-              onChange={(event) => {
-                setValue(event.target.value);
-              }}
-            />
+            <div className="input-group ">
+              <span className="input-group-text border-0" id="search-addon">
+                <i className="fas fa-search-location icon"></i>
+              </span>
+              <input
+                required
+                type="search"
+                className="form-control"
+                placeholder={query}
+                aria-label="Search"
+                onChange={(event) => {
+                  setValue(event.target.value);
+                }}
+                aria-describedby="search-addon"
+              />
+            </div>
           </Col>
           <Col className="p-0 " lg={6} xs={12} sm={12} md={6} xl={6}>
             <InputGroup.Append>
@@ -54,9 +62,13 @@ function SearchInput(props) {
                 categorylang={categorylang}
                 setCategoryName={setCategoryName}
                 setCategoryID={setCategoryID}
-                className="buttonw"
+                className=" rounded-0 buttonround"
               />
-              <Button variant="dark" type="submit" className="w-100 buttonw">
+              <Button
+                variant="dark"
+                type="submit"
+                className="w-100 button-round"
+              >
                 {t("search.1")}
               </Button>
             </InputGroup.Append>
@@ -68,3 +80,17 @@ function SearchInput(props) {
 }
 
 export default SearchInput;
+
+/*
+
+
+<FormControl
+              required
+              className="h-100 formw mx-auto"
+              placeholder={query}
+              onChange={(event) => {
+                setValue(event.target.value);
+              }}
+            />
+
+*/

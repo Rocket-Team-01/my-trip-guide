@@ -1,16 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://www.barclayscenter.com/assets/img/Parm-910x450-bc510c5a07.jpg")
-      no-repeat center center fixed;
+  background: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat center center fixed;
   /* display: table; */
+  background-color: white !important;
   height: 100vh;
   /* position: relative; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   font-family: "Open Sans", sans-serif;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+}
+
+.minititle {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  background: url(https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .landing-text {
@@ -53,4 +69,24 @@
 }
 .grow:hover {
   transform: scale(1.1);
+}
+.icon {
+  font-size: 20px;
+}
+
+.buttonround {
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.resback {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://image.freepik.com/free-vector/black-restaurant-icons_1284-673.jpg);
+}
+
+.textback {
+  background-color: gray;
+  border-radius: 10px;
 }
