@@ -12,11 +12,11 @@ function Context(props) {
     i18next.changeLanguage(lang);
   }
   React.useEffect(() => {
-    setLang("English")
-    i18next.changeLanguage('en')
-  },[])
+    setLang("ENG");
+    i18next.changeLanguage("en");
+  }, []);
   return (
-    <LanguageContext.Provider value={{ t, handleClick,setLang,lang }}>
+    <LanguageContext.Provider value={{ t, handleClick, setLang, lang }}>
       {props.children}
     </LanguageContext.Provider>
   );

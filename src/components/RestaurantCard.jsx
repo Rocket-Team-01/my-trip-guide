@@ -15,7 +15,7 @@ export default function RestaurantCard(props) {
   console.log("rest card");
   return (
     <Container>
-      <Row className="pb-5 justify-content-center">
+      <Row className="pb-5 justify-content-center pt-5">
         {props.cityRest.map((item, index) => (
           <React.Fragment key={index}>
             <Col xs={12} sm={6} md={6} lg={3} xl={3} className="pb-3">
@@ -34,15 +34,15 @@ export default function RestaurantCard(props) {
               )}
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} xl={3}>
-              <div className="text-center textback mt-3">
-                <h3 className="text-dark fs-5 font-weight-bold pt-3">
+              <div className="text-center textback mt-3 ">
+                <h3 className="text-white fs-5 font-weight-bold pt-3">
                   {item.restaurant.name}
                 </h3>
-                <h6 className="text-dark">
+                <h6 className="text-white">
                   {t("details.1")} :{" "}
                   {item.restaurant.phone_numbers.slice(0, 12)}
                 </h6>
-                <h6 className="text-dark py-1">
+                <h6 className="text-white py-1 mb-2">
                   <span
                     className="p-2 rounded-3 text-white"
                     style={{
@@ -66,7 +66,7 @@ export default function RestaurantCard(props) {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fill="#2c3e50"
+                  fill="white"
                   className="bi bi-bookmark-fill"
                   viewBox="0 0 16 16"
                 >
@@ -74,7 +74,7 @@ export default function RestaurantCard(props) {
                 </svg>
                 <button
                   type="button"
-                  className="btn btn-primary ml-2"
+                  className="btn btn-primary ml-2 mb-1"
                   data-toggle="modal"
                   data-target=".bd-example-modal-lg"
                   onClick={() => {

@@ -6,6 +6,8 @@ import { LanguageContext } from "../context/LanguageContext";
 import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
 import SearchInput from "./SearchInput";
+import TranslateIcon from "@material-ui/icons/Translate";
+
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
   const [background, setBackground] = React.useState("");
@@ -63,6 +65,7 @@ function Header() {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
+                <TranslateIcon />
                 {languageContextAPI.lang}
               </button>
               <div className="dropdown-menu">
@@ -71,20 +74,20 @@ function Header() {
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
                     languageContextAPI.handleClick("tr");
-                    languageContextAPI.setLang("Türkçe");
+                    languageContextAPI.setLang("TR");
                   }}
                 >
-                  TR
+                  Türkçe
                 </Button>
                 <Button
                   className="dropdown-item"
                   aria-labelledby="btnGroupDrop1"
                   onClick={() => {
                     languageContextAPI.handleClick("en");
-                    languageContextAPI.setLang("English");
+                    languageContextAPI.setLang("ENG");
                   }}
                 >
-                  Eng
+                  English
                 </Button>
               </div>
             </div>

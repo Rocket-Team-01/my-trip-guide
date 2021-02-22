@@ -40,13 +40,16 @@ function SearchInput(props) {
         >
           <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
             <div className="input-group ">
-              <span className="input-group-text border-0" id="search-addon">
-                <i className="fas fa-search-location icon"></i>
+              <span
+                className="input-group-text border-0 iconbg searchbar"
+                id="search-addon"
+              >
+                <i class="fas fa-map-marker-alt icon"></i>
               </span>
               <input
                 required
                 type="search"
-                className="form-control"
+                className="form-control searchcolor"
                 placeholder={query}
                 aria-label="Search"
                 onChange={(event) => {

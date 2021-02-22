@@ -6,6 +6,7 @@ import Header from "./Header";
 import SearchInput from "./SearchInput";
 import RestaurantCard from "./RestaurantCard";
 import { LanguageContext } from "../context/LanguageContext";
+import FetchRestaurant from "./FetchRestaurant";
 
 export default function Home(props) {
   const languageContextAPI = React.useContext(LanguageContext);
@@ -68,9 +69,9 @@ export default function Home(props) {
           <h6 className="text-center py-5 bg-light m-0 minititle ">
             The Most Popular Restaurants in <br /> {city}
           </h6>
-          <Container fluid className="bg-white resback">
+          <Container fluid className="resback">
             <Row>
-              <RestaurantCard cityRest={result} />
+              <FetchRestaurant query={city} />
             </Row>
           </Container>
         </>
