@@ -9,7 +9,9 @@
     "navbar" : {
       "1" : "Anasayfa",
       "2" : "İletişim",
-      "3" : "Hakkımızda"
+      "3" : "Hakkımızda",
+      "4":"Kaydol",
+      "5": "Giriş Yap"
     },
     "details" : {
       "1" : "Tel No",

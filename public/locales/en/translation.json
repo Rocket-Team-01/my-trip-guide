@@ -9,7 +9,9 @@
   "navbar": {
     "1": "HomePage",
     "2": "Contact",
-    "3": "About"
+    "3": "About",
+    "4":"Sign Up",
+    "5": "Login"
   },
   "details": {
     "1": "Phone",

@@ -49,6 +49,12 @@ function Header() {
           <Link className="nav-link  mr-2" to="/about">
             {languageContextAPI.t("navbar.3")}
           </Link>
+          <Link className="nav-link  mr-2" to="/signup">
+            {languageContextAPI.t("navbar.4")}
+          </Link>
+          <Link className="nav-link  mr-2" to="/signup">
+            {languageContextAPI.t("navbar.5")}
+          </Link>
           <div
             className="btn-group"
             role="group"
