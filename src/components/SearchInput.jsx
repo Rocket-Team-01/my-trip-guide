@@ -34,52 +34,47 @@ function SearchInput(props) {
     <Container>
       <Row className="text-center  justify-content-center align-items-center mt-4 ">
         <InputGroup
-          className="text-center justify-content-center mx-auto pt-4 "
+          className="text-center justify-content-center mx-auto "
           as={Form}
           onSubmit={handleSubmit}
         >
           <Col className="p-0" lg={6} xs={12} sm={12} md={6} xl={6}>
-          <InputGroup.Append> 
+            <InputGroup.Append>
               <span
                 className="input-group-text border-0 iconbg searchbar m-0 p-0"
                 id="search-addon"
               >
                 <i className="fas fa-map-marker-alt icon"></i>
-             
-              <input
-                required
-                type="search"
-                className="form-control searchcolor"
-                placeholder={query}
-                aria-label="Search"
-                onChange={(event) => {
-                  setValue(event.target.value);
-                }}
-                aria-describedby="search-addon"
-              />
-             </span>
-          </InputGroup.Append> 
+
+                <input
+                  required
+                  type="search"
+                  className="form-control searchcolor"
+                  placeholder={query}
+                  aria-label="Search"
+                  onChange={(event) => {
+                    setValue(event.target.value);
+                  }}
+                  aria-describedby="search-addon"
+                />
+              </span>
+            </InputGroup.Append>
           </Col>
           <Col className="p-0 " lg={6} xs={12} sm={12} md={6} xl={6}>
-          <InputGroup.Append> 
-          <div className="btn-group search-btn-group mx-0" role="group" >
-              <CategoriesButton
-                categorylang={categorylang}
-                setCategoryName={setCategoryName}
-                setCategoryID={setCategoryID}
-                className=" rounded-0 button-round btn"
-              />
-              <Button
-               
-                type="submit"
-                className="w-100 button-round btn"
-              >
-                {t("search.1")}
-              </Button>
+            <InputGroup.Append>
+              <div className="btn-group search-btn-group mx-0" role="group">
+                <CategoriesButton
+                  categorylang={categorylang}
+                  setCategoryName={setCategoryName}
+                  setCategoryID={setCategoryID}
+                  className=" rounded-0 button-round btn"
+                />
+                <Button type="submit" className="w-50 button-round btn">
+                  {t("search.1")}
+                </Button>
               </div>
-              </InputGroup.Append>
+            </InputGroup.Append>
           </Col>
-        
         </InputGroup>
       </Row>
     </Container>

@@ -55,23 +55,26 @@ export default function Home(props) {
         </Row>
         <Row className=" m-0 p-0 align-items-center h-100 ">
           <div className="landing-text text-light  ">
-            <h1 className="title pt-5 ">{languageContextAPI.t("greeting.1")}</h1>
+            <h1 className="title pt-5 ">
+              {languageContextAPI.t("greeting.1")}
+            </h1>
             <Row className="searchinput mx-auto p-0 m-0">
-              
-                <SearchInput />
-
+              <SearchInput />
             </Row>
           </div>
         </Row>
       </Container>
+      {/* <div class="wrapper">
+        <div class="divider div-transparent"></div>
+      </div> */}
       {city ? (
         <>
           <h6 className="text-center py-5 bg-light m-0 minititle ">
             The Most Popular Restaurants in <br /> {city}
           </h6>
           <Container fluid className="resback">
-            <Row >
-              <FetchRestaurant query={city} category={''} />
+            <Row>
+              <FetchRestaurant query={city} category={""} />
             </Row>
           </Container>
         </>

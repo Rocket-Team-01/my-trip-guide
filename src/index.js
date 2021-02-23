@@ -6,7 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <Suspense fallback={[<div key={1}>loading</div>]}>
+  <Suspense fallback={[]}>
     <App />
   </Suspense>,
   document.getElementById("root")

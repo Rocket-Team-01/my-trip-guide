@@ -1,8 +1,25 @@
 .navbarBorder {
+  /* background: rgb(255, 212, 172); */
   border: 1px solid rgba(133, 133, 133, 0.4);
   position: absolute;
   width: 100%;
   color: white;
+}
+.nav-link {
+  color: white !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none !important;
+}
+*:focus {
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 .navbarBorderr {
   background-color: #982121 !important;
@@ -21,4 +38,21 @@
 
 .navtitle {
   font-family: "Dancing Script", cursive !important;
+}
+
+@media (max-width: 950px) {
+  .navbarBorder {
+    background-color: #982121 !important;
+
+    border: 1px solid rgba(133, 133, 133, 0.4);
+    width: 100%;
+    color: white;
+  }
+}
+.lang-button {
+  background-color: transparent !important;
+  border: none;
+}
+.lang-button:focus {
+  outline: none !important;
 }

@@ -98,15 +98,20 @@ export default function RestaurantCard(props) {
                   <div className="modal-dialog modal-dialog-centered modal-lg">
                     <div className="modal-content">
                       <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">
-                          {name}{" "}
-                          <span className="ml-3 bg-success rounded-3 text-white p-1">
-                            {number} <i className="fas fa-phone"></i>
-                          </span>
-                        </h5>
+                        <div className="mx-auto">
+                          <h5
+                            className="modal-title modaltitle text-center"
+                            id="exampleModalLabel"
+                          >
+                            {name} <br />
+                            <span className=" bg-success rounded-3 text-white p-1 text-center">
+                              {number} <i className="fas fa-phone"></i>
+                            </span>
+                          </h5>
+                        </div>
                         <button
                           type="button"
-                          className="close"
+                          className="close pl-0 ml-0"
                           data-dismiss="modal"
                           aria-label="Close"
                         >

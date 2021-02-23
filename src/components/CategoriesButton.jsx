@@ -16,15 +16,17 @@ function CategoriesButton(props) {
 
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <Button
-      variant="danger"
-      className='category-button category-round'
+      className='category-button category-round '
       ref={ref}
       onClick={(e) => {
         e.preventDefault();
         onClick(e);
       }}
     >
+      <span className='category-item'>
       {children}
+      </span>
+     
       &#x25bc;
     </Button>
   ));
@@ -60,6 +62,7 @@ function CategoriesButton(props) {
         {categories.map((item, index) => (
           <Dropdown.Item
             key={index}
+            className=''
             eventKey={item.id}
             onSelect={() => {
               props.setCategoryName(item.name);
