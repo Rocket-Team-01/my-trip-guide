@@ -13,7 +13,7 @@ export default function Contact() {
         options={{
           background: {
             color: {
-              value: "#0a2e38",
+              value: "#f47804",
             },
           },
           fpsLimit: 60,
