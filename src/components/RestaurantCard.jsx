@@ -4,44 +4,11 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
 import "../css/Home.css";
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-
+import food from "../images/food.png";
 export default function RestaurantCard(props) {
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex",
-    },
-    details: {
-      display: "flex",
-      flexDirection: "column",
-    },
-    content: {
-      flex: "1 0 auto",
-    },
-    cover: {
-      width: 151,
-    },
-    controls: {
-      display: "flex",
-      alignItems: "center",
-      paddingLeft: theme.spacing(1),
-      paddingBottom: theme.spacing(1),
-    },
-    playIcon: {
-      height: 38,
-      width: 38,
-    },
-  }));
-
-  const classes = useStyles();
-  const theme = useTheme();
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -55,37 +22,33 @@ export default function RestaurantCard(props) {
       <Row className="py-5 justify-content-center align-items-center text-center ">
         {props.cityRest.map((item, index) => (
           <Col xs={12} sm={12} md={12} lg={6} xl={6} className="mx-auto py-2  ">
-            <Card className={`${classes.root} rest-card card`}>
+            <Card className={` rest-card card`}>
               <Row>
-                <Col xs={12} sm={5} md={3} lg={5} xl={4} className="">
+                <Col xs={12} sm={5} md={5} lg={5} xl={4} className="">
                   {item.restaurant.featured_image ? (
                     <CardMedia
-                      className={`${classes.cover} m-0 p-0 rest-img`}
+                      className={` m-0 p-0 rest-img`}
                       image={item.restaurant.featured_image}
-                      title="Live from space album cover"
                       style={{ width: "200px", height: "12rem" }}
                     />
                   ) : (
                     <CardMedia
-                      className={`${classes.cover} m-0 p-0 rest-img`}
-                      image="https://b.zmtcdn.com/images/res_avatar_476_320_1x_new.png?output-format=webp%22"
-                      title="Live from space album cover"
-                      style={{ width: "200px", height: "12rem" }}
+                      className={`mx-auto rest-img`}
+                      image={food}
+                      style={{ width: "200px", height: "200px" }}
                     />
                   )}
                 </Col>
                 <Col
                   xs={12}
                   sm={7}
-                  md={9}
+                  md={7}
                   lg={5}
                   xl={8}
                   className="text-center justify-content-center"
                 >
-                  <div className={classes.details}>
-                    <CardContent
-                      className={`${classes.content} text-center d-block mx-auto`}
-                    >
+                  <div>
+                    <CardContent className=" text-center d-block mx-auto">
                       <Typography
                         component="h6"
                         variant="h6"
@@ -95,20 +58,29 @@ export default function RestaurantCard(props) {
                         {item.restaurant.name}
                       </Typography>
                       <Typography
-                        variant="subtitle1"
+                        // variant="subtitle1"
                         color="textSecondary"
                         style={{ width: "200px" }}
                       >
                         {t("details.1")} :{" "}
                         {item.restaurant.phone_numbers.slice(0, 12)}
                       </Typography>
-                      <Typography className="mt-4">
+                      <Typography className="pb-1 pt-4">
+                        <span
+                          className="p-2 rounded-3 text-white"
+                          style={{
+                            backgroundColor: `#${item.restaurant.user_rating.rating_color}`,
+                          }}
+                        >
+                          {item.restaurant.user_rating.aggregate_rating}
+                        </span>
+
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
                           height="20"
                           fill="#e74c3c"
-                          className="bi bi-heart-fill mr-3 "
+                          className="bi bi-heart-fill mr-3 ml-3 "
                           viewBox="0 0 16 16"
                         >
                           <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
@@ -125,7 +97,7 @@ export default function RestaurantCard(props) {
                         </svg>
                         <button
                           type="button"
-                          className="btn btn-primary ml-2 mb-1 "
+                          className="btn details-btn ml-2  "
                           data-toggle="modal"
                           data-target=".bd-example-modal-lg"
                           onClick={() => {
@@ -471,30 +443,30 @@ export default function RestaurantCard(props) {
 //           </React.Fragment>
 
 {
-  /* <div class="multi-button">
-<button>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    fill="#e74c3c"
-    className="bi bi-heart-fill mr-3 "
-    viewBox="0 0 16 16"
-  >
-    <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-  </svg>
-</button>
-<button>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    fill="#2c3e50"
-    className="bi bi-bookmark-fill"
-    viewBox="0 0 16 16"
-  >
-    <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
-  </svg>
-</button>
-</div> */
+  /* <div className="multi-button">
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="#e74c3c"
+                    className="bi bi-heart-fill mr-3 "
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </button>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="#2c3e50"
+                    className="bi bi-bookmark-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                  </svg>
+                </button>
+              </div> */
 }
