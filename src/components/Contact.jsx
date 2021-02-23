@@ -107,7 +107,7 @@ export default function Contact() {
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-                <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={4} sm={4} md={4} className="text-info">
                   <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={4} sm={4} md={4} className="text-info">
                   <a href="https://github.com/alisaid1gunes">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
+                <Col xs={4} sm={4} md={4} className="text-info">
                   <a href="mailto: alisaid1gunes@gmail.com">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -161,11 +161,11 @@ export default function Contact() {
                 />
               </Row>
               <Row className="mx-auto d-block mt-2">
-                <h2>Ali Said Güneş</h2>
+                <h2>Emine Kebeli</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-                <Col xs={3} sm={3} md={3} className="text-info">
-                  <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
+                <Col xs={4} sm={4} md={4} className="text-info">
+                  <a href="https://www.linkedin.com/in/eminekebeli/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -178,8 +178,8 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
-                  <a href="https://github.com/alisaid1gunes">
+                <Col xs={4} sm={4} md={4} className="text-info">
+                  <a href="https://github.com/eminekbl">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -192,8 +192,8 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info">
-                  <a href="mailto: alisaid1gunes@gmail.com">
+                <Col xs={4} sm={4} md={4} className="text-info">
+                  <a href="mailto: kbl.emine@gmail.com">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -218,11 +218,11 @@ export default function Contact() {
                 />
               </Row>
               <Row className="mx-auto d-block mt-2">
-                <h2>Ali Said Güneş</h2>
+                <h2>Efekan Efe</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-                <Col xs={3} sm={3} md={3} className="text-info">
-                  <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
+                <Col xs={4} sm={4} md={4} className="text-info">
+                  <a href="https://www.linkedin.com/in/efekan-efe/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -235,8 +235,8 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info ">
-                  <a href="https://github.com/alisaid1gunes">
+                <Col xs={4} sm={4} md={4} className="text-info ">
+                  <a href="https://github.com/efekanefos">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -249,8 +249,8 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={3} sm={3} md={3} className="text-info ">
-                  <a href="mailto: alisaid1gunes@gmail.com">
+                <Col xs={4} sm={4} md={4} className="text-info ">
+                  <a href="mailto: efekanefos@gmail.com">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
