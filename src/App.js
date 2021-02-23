@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import pages from './data/pages'
-import {Context} from './context/LanguageContext'
+import { Context } from './context/LanguageContext'
 function App() {
   const routeMaps = pages.map((item, index) => (
     <Route
@@ -15,7 +15,10 @@ function App() {
     <Context>
       <BrowserRouter>
         <Switch>
-        {routeMaps}
+          {routeMaps}
+          <Route>
+            <Redirect to="/404" />
+          </Route>
         </Switch>
       </BrowserRouter>
     </Context>
