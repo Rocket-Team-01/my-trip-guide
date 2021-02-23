@@ -26,6 +26,7 @@ export default function SignUp() {
             <Row className=" h-100 d-flex justify-content-center d-flex align-items-center  ">
              
               <Col md={6}>
+              <h1 className="text-center mb-3">Sign Up</h1>
                 <Form className=" ">
                   <Row className=".nopadding">
                     <Col md={6} className=" ">
