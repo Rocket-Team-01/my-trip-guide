@@ -199,3 +199,107 @@
     transparent
   );
 }
+
+body .card {
+  --background: #ffffff;
+  --text: black;
+  position: relative !important;
+  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05) !important;
+}
+body .card .multi-button {
+  z-index: 0;
+  position: absolute !important;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-radius: 100%;
+  width: 0rem;
+  height: 0rem;
+  transform: translate(-50%, -50%);
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+body .card .multi-button button {
+  display: grid;
+  place-items: center;
+  position: absolute !important;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 100%;
+  background: var(--background);
+  color: var(--text);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0rem -0.25rem var(--background);
+}
+body .card .multi-button button:hover {
+  background: var(--text);
+  color: var(--background);
+  box-shadow: 0 0 1rem -0.25rem var(--background);
+}
+body .card .multi-button button:first-child:nth-last-child(1):nth-child(1),
+body .card .multi-button button:first-child:nth-last-child(1) ~ *:nth-child(1) {
+  left: 25%;
+  top: 25%;
+}
+body .card .multi-button button:first-child:nth-last-child(2):nth-child(1),
+body .card .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(1) {
+  left: 37.5%;
+  top: 18.75%;
+}
+body .card .multi-button button:first-child:nth-last-child(2):nth-child(2),
+body .card .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(2) {
+  left: 18.75%;
+  top: 37.5%;
+}
+body .card .multi-button button:first-child:nth-last-child(3):nth-child(1),
+body .card .multi-button button:first-child:nth-last-child(3) ~ *:nth-child(1) {
+  left: 50%;
+  top: 15.625%;
+}
+body .card .multi-button button:first-child:nth-last-child(3):nth-child(2),
+body .card .multi-button button:first-child:nth-last-child(3) ~ *:nth-child(2) {
+  left: 25%;
+  top: 25%;
+}
+
+body .card .multi-button button:first-child:nth-last-child(4):nth-child(1),
+body .card .multi-button button:first-child:nth-last-child(4) ~ *:nth-child(1) {
+  left: 62.5%;
+  top: 18.75%;
+}
+body .card .multi-button button:first-child:nth-last-child(4):nth-child(2),
+body .card .multi-button button:first-child:nth-last-child(4) ~ *:nth-child(2) {
+  left: 37.5%;
+  top: 18.75%;
+}
+
+body .card .container {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: var(--background);
+  color: var(--text);
+}
+body .card:hover .multi-button,
+body .card .multi-button:focus-within {
+  width: 10rem;
+  height: 10rem;
+}
+
+@media (max-width: 575px) {
+  .rest-img {
+    margin: 0 auto !important;
+  }
+}
+
+.rest-card {
+  min-height: 12rem;
+  height: auto;
+  background-color: #ffffffd0 !important;
+}
+.rest-card img {
+  /* min-height: 13rem !important; */
+  height: 12rem !important;
+}
