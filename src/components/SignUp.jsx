@@ -24,6 +24,7 @@ export default function SignUp() {
           ></Col>
           <Col md={12} xs={12} sm={12} lg={8} className="h-100 w-100 bg-light">
             <Row className=" h-100 d-flex justify-content-center d-flex align-items-center  ">
+             
               <Col md={6}>
                 <Form className=" ">
                   <Row className=".nopadding">
@@ -52,15 +53,16 @@ export default function SignUp() {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" />
                   </Form.Group>
-
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    id="signup-button"
-                    className="shadow-none d-block mx-auto"
-                  >
-                    Submit
-                  </Button>
+                  <Row className="d-flex justify-content-center mt-5 ">
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      id="signup-button"
+                      className="shadow-none  w-50 "
+                    >
+                      Sign Up
+                    </Button>
+                  </Row>
                 </Form>
               </Col>
             </Row>
