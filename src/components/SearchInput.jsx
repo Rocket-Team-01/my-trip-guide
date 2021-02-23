@@ -49,7 +49,7 @@ function SearchInput(props) {
                 <input
                   required
                   type="search"
-                  className="form-control searchcolor"
+                  className="form-control-search searchcolor"
                   placeholder={query}
                   aria-label="Search"
                   onChange={(event) => {
