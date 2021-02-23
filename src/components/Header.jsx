@@ -52,7 +52,7 @@ function Header() {
           <Link className="nav-link  mr-2" to="/signup">
             {languageContextAPI.t("navbar.4")}
           </Link>
-          <Link className="nav-link  mr-2" to="/signup">
+          <Link className="nav-link  mr-2" to="/login">
             {languageContextAPI.t("navbar.5")}
           </Link>
           <div
