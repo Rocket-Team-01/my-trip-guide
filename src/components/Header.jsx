@@ -64,7 +64,7 @@ function Header() {
               <button
                 id="btnGroupDrop1"
                 type="button"
-                className="btn btn-secondary dropdown-toggle lang-button"
+                className="btn btn-secondary dropdown-toggle lang-button shadow-none"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
