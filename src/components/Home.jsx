@@ -7,7 +7,7 @@ import SearchInput from "./SearchInput";
 import RestaurantCard from "./RestaurantCard";
 import { LanguageContext } from "../context/LanguageContext";
 import FetchRestaurant from "./FetchRestaurant";
-
+import Footer from "./Footer";
 export default function Home(props) {
   const languageContextAPI = React.useContext(LanguageContext);
   const [result, setResult] = useState([]);
@@ -81,6 +81,7 @@ export default function Home(props) {
       ) : (
         ""
       )}
+      <Footer />
     </div>
   );
 }

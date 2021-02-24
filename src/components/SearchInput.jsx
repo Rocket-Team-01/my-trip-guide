@@ -22,13 +22,17 @@ function SearchInput(props) {
   let history = useHistory();
   const [categoryName, setCategoryName] = useState();
   const [categoryID, setCategoryID] = useState();
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState(query);
 
   function handleSubmit(event) {
     setValue(value.toLowerCase());
     categoryID
       ? history.push(`/search/${value}/${categoryID}`)
       : history.push(`/search/${value}`);
+  }
+
+  function handleInputChange(event) {
+    setValue(event);
   }
   return (
     <Container>
@@ -50,10 +54,12 @@ function SearchInput(props) {
                   required
                   type="search"
                   className="form-control-search searchcolor"
-                  placeholder={query}
+                  // placeholder={query}
+                  value={value}
                   aria-label="Search"
                   onChange={(event) => {
-                    setValue(event.target.value);
+                    // setValue(event.target.value);
+                    handleInputChange(event.target.value);
                   }}
                   aria-describedby="search-addon"
                 />
