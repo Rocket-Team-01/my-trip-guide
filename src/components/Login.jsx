@@ -20,7 +20,7 @@ export default function SignUp() {
           <Col
             md={4}
             className="h-100 d-none d-lg-block"
-            id="left-background"
+            id="left-background-new"
           ></Col>
           <Col md={12} xs={12} sm={12} lg={8} className="h-100 w-100 bg-light">
             <Row className=" h-100 d-flex justify-content-center d-flex align-items-center  ">
