@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import pages from './data/pages'
-import { Context } from './context/LanguageContext'
+import pages from "./data/pages";
+import { Context } from "./context/LanguageContext";
 function App() {
   const routeMaps = pages.map((item, index) => (
     <Route

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+
 function FetchRestaurant(props) {
   const [result, setResult] = useState([]);
+
   var requestOptions = {
     method: "GET",
     headers: {
-      "user-key": "db2be0967570927606ec338dc209b5ea",
+      "user-key": "cd830f4f567a995967a4a0f641b21007",
       "content-type": "application/json",
     },
     redirect: "follow",
@@ -22,7 +24,7 @@ function FetchRestaurant(props) {
           : getReastaurantbyCity(res.location_suggestions[0].id);
       })
       .catch((error) => console.log("error", error));
-  }, [getReastaurantbyCategory, getReastaurantbyCity]);
+  }, []);
 
   function getReastaurantbyCategory(event) {
     fetch(

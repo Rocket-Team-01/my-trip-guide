@@ -31,32 +31,32 @@ export default function Footer() {
           <h5>Features</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Cool stuff
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Random feature
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Team feature
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Stuff for developers
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Another one
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Last time
               </a>
             </li>
@@ -66,22 +66,22 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Resource
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Resource name
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Another resource
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Final resource
               </a>
             </li>
@@ -91,22 +91,22 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Business
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Education
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Government
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Gaming
               </a>
             </li>
@@ -116,22 +116,22 @@ export default function Footer() {
           <h5>About</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Team
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Locations
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Privacy
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="footer-text" href="#">
                 Terms
               </a>
             </li>
