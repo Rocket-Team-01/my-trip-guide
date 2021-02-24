@@ -13,7 +13,7 @@ export default function Contact() {
         options={{
           background: {
             color: {
-              value: "#f47804",
+              value: "#e32929",
             },
           },
           fpsLimit: 60,
@@ -157,7 +157,7 @@ export default function Contact() {
               <Row className="mt-3">
                 <Card.Img
                   className="img-fluid w-50  rounded-circle mx-auto d-block"
-                  src="https://pbs.twimg.com/profile_images/1181475356060073984/EX0DJS_1_400x400.jpg"
+                  src="https://media-exp1.licdn.com/dms/image/C4D03AQGed-TsT2Davw/profile-displayphoto-shrink_800_800/0/1517879534368?e=1619654400&v=beta&t=CMiLnIHeFpLj0bAt17BiVk8S57Kw_7KTeWr4zsVWEm0"
                 />
               </Row>
               <Row className="mx-auto d-block mt-2">
@@ -214,7 +214,7 @@ export default function Contact() {
               <Row className="mt-3">
                 <Card.Img
                   className="img-fluid w-50  rounded-circle mx-auto d-block"
-                  src="https://pbs.twimg.com/profile_images/1181475356060073984/EX0DJS_1_400x400.jpg"
+                  src="https://media-exp1.licdn.com/dms/image/C4E03AQGJdCsIuXulbA/profile-displayphoto-shrink_800_800/0/1551898647414?e=1619654400&v=beta&t=nyi-hVP7A1luJ4R-TZs---2wxlOReZkCd4M8T8ogPE0"
                 />
               </Row>
               <Row className="mx-auto d-block mt-2">
