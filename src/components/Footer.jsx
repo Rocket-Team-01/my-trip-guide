@@ -1,8 +1,8 @@
 import React from "react";
-
+import "../css/Footer.css";
 export default function Footer() {
   return (
-    <footer className="container py-5">
+    <footer className="container-fluid p-5 theme">
       <div className="row">
         <div className="col-12 col-md">
           <svg
