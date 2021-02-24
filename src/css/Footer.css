@@ -1,4 +1,7 @@
-.theme{
-    background-color: #813531;
-    color: #ffff;
+.theme {
+  background-color: #982121;
+  color: #ffff !important;
+}
+a {
+  color: rgb(189, 189, 189) !important;
 }

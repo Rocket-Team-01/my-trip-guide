@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "../css/Home.css";
 import Header from "./Header";
 import SearchInput from "./SearchInput";
-import RestaurantCard from "./RestaurantCard";
 import { LanguageContext } from "../context/LanguageContext";
 import FetchRestaurant from "./FetchRestaurant";
 import Footer from "./Footer";
@@ -13,16 +12,15 @@ export default function Home(props) {
   const [result, setResult] = useState([]);
   const [city, setCity] = useState("");
 
-  var requestOptions = {
-    method: "GET",
-    headers: {
-      "user-key": "db2be0967570927606ec338dc209b5ea",
-      "content-type": "application/json",
-    },
-    redirect: "follow",
-  };
-
   useEffect(() => {
+    var requestOptions = {
+      method: "GET",
+      headers: {
+        "user-key": "db2be0967570927606ec338dc209b5ea",
+        "content-type": "application/json",
+      },
+      redirect: "follow",
+    };
     navigator.geolocation.getCurrentPosition((response) => {
       const lat = response.coords.latitude;
       const lon = response.coords.longitude;
@@ -64,9 +62,6 @@ export default function Home(props) {
           </div>
         </Row>
       </Container>
-      {/* <div class="wrapper">
-        <div class="divider div-transparent"></div>
-      </div> */}
       {city ? (
         <>
           <h6 className="text-center py-5 bg-light m-0 minititle ">

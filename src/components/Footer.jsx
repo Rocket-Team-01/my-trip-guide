@@ -25,38 +25,38 @@ export default function Footer() {
             <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
             <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
           </svg>
-          <small className="d-block mb-3 text-muted">© 2017-2018</small>
+          <small className="d-block mb-3 ">© 2021</small>
         </div>
         <div className="col-6 col-md">
           <h5>Features</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Cool stuff
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Random feature
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Team feature
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Stuff for developers
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Another one
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Last time
               </a>
             </li>
@@ -66,22 +66,22 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Resource
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Resource name
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Another resource
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Final resource
               </a>
             </li>
@@ -91,22 +91,22 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Business
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Education
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Government
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Gaming
               </a>
             </li>
@@ -116,22 +116,22 @@ export default function Footer() {
           <h5>About</h5>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Team
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Locations
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Privacy
               </a>
             </li>
             <li>
-              <a className="text-muted" href="#">
+              <a className="" href="#">
                 Terms
               </a>
             </li>

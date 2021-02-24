@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 function FetchRestaurant(props) {
   const [result, setResult] = useState([]);
-
   var requestOptions = {
     method: "GET",
     headers: {
@@ -11,7 +10,6 @@ function FetchRestaurant(props) {
     },
     redirect: "follow",
   };
-
   useEffect(() => {
     fetch(
       `https://developers.zomato.com/api/v2.1/cities?q=${props.query}`,
@@ -24,7 +22,7 @@ function FetchRestaurant(props) {
           : getReastaurantbyCity(res.location_suggestions[0].id);
       })
       .catch((error) => console.log("error", error));
-  }, []);
+  }, [getReastaurantbyCategory, getReastaurantbyCity]);
 
   function getReastaurantbyCategory(event) {
     fetch(
