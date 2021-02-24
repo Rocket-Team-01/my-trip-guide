@@ -195,12 +195,26 @@
 .rest-card {
   min-height: 12rem;
   height: auto;
-  background-color: #ffffffd0;
+  background-color: #ffffff !important;
+  /* position: relative; */
 }
 .rest-card img {
   height: 12rem !important;
 }
-.details-btn {
+.detail-group {
+  position: relative;
+}
+.details {
   color: #ffffff !important;
   background-color: #e32929;
+  position: absolute;
+  bottom: 15px;
+  /* left: 50% !important; */
+  /* justify-content: center; */
+}
+.modal-body {
+  color: black;
+}
+.modaltitle {
+  color: black;
 }
