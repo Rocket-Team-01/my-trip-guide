@@ -1,62 +1,75 @@
 {
-    "greeting":{ 
-        "1" : "En iyi Restoranları Ara"
+  "greeting": {
+    "1": "En iyi Restoranları Ara"
+  },
+  "search": {
+    "1": "Ara",
+    "2": "Kategoriler"
+  },
+  "navbar": {
+    "1": "Anasayfa",
+    "2": "İletişim",
+    "3": "Hakkımızda",
+    "4": "Kaydol",
+    "5": "Giriş Yap"
+  },
+  "details": {
+    "1": "Tel No",
+    "2": "Detaylar",
+    "3": "2 Kişilik Ortalama Hesap Ücreti",
+    "4": "Açılış-Kapanış Saatleri",
+    "5": "Adres",
+    "6": "Kapat",
+    "7": "Favorilerime Ekle"
+  },
+  "placeholder": {
+    "1": "filtrelemeye başla..."
+  },
+  "login": {
+    "login": "Giriş Yap",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre"
+  },
+  "signup": {
+    "signup": "Kaydol",
+    "name": "İsim",
+    "username": "Kullanıcı Adı",
+    "mail": "Maıl Adresi",
+    "never": "E-postanızı asla başkalarıyla paylaşmayacağız.",
+    "password": "Şifre"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Teslimat"
     },
-    "search": {
-      "1" : "Ara",
-      "2" : "Kategoriler"
+    {
+      "id": 3,
+      "name": "Gece Hayatı"
     },
-    "navbar" : {
-      "1" : "Anasayfa",
-      "2" : "İletişim",
-      "3" : "Hakkımızda",
-      "4":"Kaydol",
-      "5": "Giriş Yap"
+    {
+      "id": 5,
+      "name": "Paket servisi"
     },
-    "details" : {
-      "1" : "Tel No",
-      "2" : "Detaylar",
-      "3" : "2 Kişilik Ortalama Hesap Ücreti",
-      "4" : "Açılış-Kapanış Saatleri",
-      "5" : "Adres",
-      "6" : "Kapat",
-      "7" : "Favorilerime Ekle"
+    {
+      "id": 6,
+      "name": "Kafeler"
     },
-    "placeholder":{
-      "1":"filtrelemeye başla..."
-       },
-    "categories": [
-      {
-        "id": 1,
-        "name": "Teslimat"
-      },
-      {
-        "id": 3,
-        "name": "Gece Hayatı"
-      },
-      {
-        "id": 5,
-        "name": "Paket servisi"
-      },
-      {
-        "id": 6,
-        "name": "Kafeler"
-      },
-      {
-        "id": 8,
-        "name": "Kahvaltı"
-      },
-      {
-        "id": 9,
-        "name": "Öğle Yemeği"
-      },
-      {
-        "id": 10,
-        "name": "Akşam Yemeği"
-      },
-      {
-        "id": 11,
-        "name": "Barlar"
-      }
-    ]
+    {
+      "id": 8,
+      "name": "Kahvaltı"
+    },
+    {
+      "id": 9,
+      "name": "Öğle Yemeği"
+    },
+    {
+      "id": 10,
+      "name": "Akşam Yemeği"
+    },
+    {
+      "id": 11,
+      "name": "Barlar"
+    }
+  ]
 }

@@ -11,7 +11,10 @@ import {
   Form,
 } from "react-bootstrap";
 import Header from "./Header";
+import { LanguageContext } from "../context/LanguageContext";
 export default function SignUp() {
+  const languageContextAPI = React.useContext(LanguageContext);
+
   return (
     <div>
       <Header />
@@ -24,34 +27,43 @@ export default function SignUp() {
           ></Col>
           <Col md={12} xs={12} sm={12} lg={8} className="h-100 w-100 bg-light">
             <Row className=" h-100 d-flex justify-content-center d-flex align-items-center  ">
-             
               <Col md={6}>
-              <h1 className="text-center mb-3">Sign Up</h1>
+                <h1 className="text-center mb-3">
+                  {languageContextAPI.t("signup.signup")}
+                </h1>
                 <Form className=" ">
                   <Row className=".nopadding">
                     <Col md={6} className=" ">
                       <Form.Group controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label>
+                          {languageContextAPI.t("signup.name")}
+                        </Form.Label>
                         <Form.Control type="email" />
                       </Form.Group>
                     </Col>
                     <Col md={6} className=" ">
                       <Form.Group controlId="formBasicUserName">
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label>
+                          {languageContextAPI.t("signup.username")}
+                        </Form.Label>
                         <Form.Control type="email" />
                       </Form.Group>
                     </Col>
                   </Row>
                   <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>
+                      {languageContextAPI.t("signup.mail")}
+                    </Form.Label>
                     <Form.Control type="email" />
                     <Form.Text className="text-muted">
-                      We'll never share your email with anyone else.
+                      {languageContextAPI.t("signup.never")}
                     </Form.Text>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>
+                      {languageContextAPI.t("signup.password")}
+                    </Form.Label>
                     <Form.Control type="password" />
                   </Form.Group>
                   <Row className="d-flex justify-content-center mt-5 ">
@@ -61,7 +73,7 @@ export default function SignUp() {
                       id="signup-button"
                       className="shadow-none  w-50 "
                     >
-                      Sign Up
+                      {languageContextAPI.t("signup.signup")}
                     </Button>
                   </Row>
                 </Form>
