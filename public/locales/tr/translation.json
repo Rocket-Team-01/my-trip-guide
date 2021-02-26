@@ -39,6 +39,9 @@
     "never": "E-postanızı asla başkalarıyla paylaşmayacağız.",
     "password": "Şifre"
   },
+  "notfound": {
+    "page": "SAYFA BULUNAMADI"
+  },
   "categories": [
     {
       "id": 1,
@@ -79,6 +82,6 @@
     "3": "Proje Kapsamı",
     "4": " Bu proje kapsamında anasayfa içeriği kullanıcının konumuna göre yakın restoranlardan oluşmaktadır. Arama kısmında ise aranan şehirdeki restoranlar gösterilecektir. Projemizd kullanılan teknolojiler:",
     "5": "Projenin Bize Kattıkları",
-    "6":"Proje yaparken teknik anlamda kursta öğrendiğimiz konuları pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp doküman okumayı, araştırma yapmayı ve takım oyununun inceliklerini keşfettik."
+    "6": "Proje yaparken teknik anlamda kursta öğrendiğimiz konuları pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp doküman okumayı, araştırma yapmayı ve takım oyununun inceliklerini keşfettik."
   }
 }
