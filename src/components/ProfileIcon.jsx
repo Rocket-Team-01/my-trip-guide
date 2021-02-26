@@ -9,6 +9,7 @@ import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
+import "../css/ProfilePage.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,11 +79,12 @@ export default function MenuListComposition() {
         >
           <Avatar
             alt="Random Profile"
-            src="https://images.generated.photos/Bf2LOu56nHGho50iWW2nyRcy22HQPawSDkshFOKeH0g/rs:fit:256:256/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzAw/MDE5NzMuanBn.jpg"
+            src="https://randomuser.me/api/portraits/lego/8.jpg"
             className="img-width"
           />
         </Button>
         <Popper
+          className="front"
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}

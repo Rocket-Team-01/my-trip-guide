@@ -1,5 +1,5 @@
 .profileimg {
-  width: 20rem;
+  width: 15rem;
   border-radius: 10rem;
 }
 .appbar {
@@ -14,4 +14,12 @@
   background-color: #e32929 !important;
   color: black !important;
   font-weight: bold !important;
+}
+
+.front {
+  z-index: 5 !important;
+}
+
+.tableback {
+  background-color: #982121 !important;
 }

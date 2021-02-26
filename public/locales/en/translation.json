@@ -1,6 +1,8 @@
 {
   "greeting": {
-    "1": "Search for Best Restaurants"
+    "1": "Search for Best Restaurants",
+    "2": "The Most Popular Restaurants in"
+
   },
   "search": {
     "1": "Search",

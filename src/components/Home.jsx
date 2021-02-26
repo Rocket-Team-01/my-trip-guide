@@ -65,7 +65,16 @@ export default function Home(props) {
       {city ? (
         <>
           <h6 className="text-center py-5 bg-light m-0 minititle ">
-            The Most Popular Restaurants in <br /> {city}
+            {languageContextAPI.lang === "ENG" ? (
+              <>
+                {`${languageContextAPI.t("greeting.2")}
+                  ${city}`}
+              </>
+            ) : (
+              <>
+                {`${city}`} {languageContextAPI.t("greeting.2")}
+              </>
+            )}
           </h6>
           <Container fluid className="resback">
             <Row>
