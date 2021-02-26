@@ -71,5 +71,13 @@
       "id": 11,
       "name": "Barlar"
     }
-  ]
+  ],
+  "about": {
+    "1": "Proje Yapılış Nedeni",
+    "2": "Proje Kodluyoruz himayesinde yapılan Adana Full Stack Web Development kurusunun bitirme ödevidir. Ancak takım arkadaşları olarak bunu bir ödev olarak değil kendimizi geliştirmek için fırsat olarak gördük.",
+    "3": "Proje Kapsamı",
+    "4": " Bu proje kapsamında anasayfa içeriği kullanıcının konumuna göre yakın restoranlardan oluşmaktadır. Arama kısmında ise aranan şehirdeki restoranlar gösterilecektir. Projemizd kullanılan teknolojiler:",
+    "5": "Projenin Bize Kattıkları",
+    "6":"Proje yaparken teknik anlamda kursta öğrendiğimiz konuları pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp doküman okumayı, araştırma yapmayı ve takım oyununun inceliklerini keşfettik."
+  }
 }

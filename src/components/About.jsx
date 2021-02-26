@@ -4,8 +4,9 @@ import { Row, Col, Container, Image, Card, Button } from "react-bootstrap";
 import "../css/About.css";
 import Header from "./Header";
 import CustomizedTimeline from "./CustomizedTimeline";
-
+import { LanguageContext } from "../context/LanguageContext";
 export default function About() {
+ 
   return (
     <div>
       <Header />

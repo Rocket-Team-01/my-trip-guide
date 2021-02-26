@@ -16,7 +16,7 @@ import CodeIcon from "@material-ui/icons/Code";
 import DoneIcon from "@material-ui/icons/Done";
 import Zoom from "react-reveal/Zoom";
 import "../css/CustomizedTimeline.css";
-
+import { LanguageContext } from "../context/LanguageContext";
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: "6px 16px",
@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CustomizedTimeline() {
   const classes = useStyles();
+  const languageContextAPI = React.useContext(LanguageContext);
+  
   return (
     <Timeline align="alternate">
       <TimelineItem>
@@ -50,13 +52,10 @@ export default function CustomizedTimeline() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Proje Yapılış Nedeni
+                  {languageContextAPI.t("about.1")}
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Proje Kodluyoruz himayesinde yapılan Adana Full Stack Web
-                    Development kurusunun bitirme ödevidir. Ancak takım
-                    arkadaşları olarak bunu bir ödev olarak değil kendimizi
-                    geliştirmek için fırsat olarak gördük.
+                  {languageContextAPI.t("about.2")}
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -84,13 +83,10 @@ export default function CustomizedTimeline() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Proje Kapsamı
+                  {languageContextAPI.t("about.3")}
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Bu proje kapsamında anasayfa içeriği kullanıcının konumuna
-                    göre yakın restoranlardan oluşmaktadır. Arama kısmında ise
-                    aranan şehirdeki restoranlar gösterilecektir. Projemizde
-                    kullanılan teknolojiler:
+                  {languageContextAPI.t("about.4")}
                   </Typography>
                   <img
                     width="48"
@@ -134,13 +130,10 @@ export default function CustomizedTimeline() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Projenin Bize Kattıkları
+                  {languageContextAPI.t("about.5")}
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Proje yaparken teknik anlamda kursta öğrendiğimiz konuları
-                    pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp
-                    doküman okumayı, araştırma yapmayı ve takım oyununun
-                    inceliklerini keşfettik.
+                  {languageContextAPI.t("about.6")}
                   </Typography>
                 </CardContent>
               </CardActionArea>
