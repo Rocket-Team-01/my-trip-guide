@@ -89,7 +89,7 @@ export default function RestaurantCard(props) {
                             type="button"
                             className="btn mx-auto float-center details "
                             data-toggle="modal"
-                            data-target=".bd-example-modal-lg"
+                            data-target="#exampleModal"
                             onClick={() => {
                               setName(item.restaurant.name);
                               setNumber(
@@ -104,7 +104,7 @@ export default function RestaurantCard(props) {
                             {t("details.2")}
                           </button>
                           <div
-                            className="modal fade bd-example-modal-lg"
+                            className="modal fade"
                             id="exampleModal"
                             tabIndex="-1"
                             aria-labelledby="myLargeModalLabel"
@@ -134,9 +134,9 @@ export default function RestaurantCard(props) {
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
-                                <div className="modal-body">
+                                <div className="modal-body ">
                                   {t("details.3")}:{" "}
-                                  <span className="data">
+                                  <span className="data ">
                                     {cost} {currency}
                                   </span>{" "}
                                   <br />
@@ -148,14 +148,14 @@ export default function RestaurantCard(props) {
                                 <div className="modal-footer mx-auto">
                                   <button
                                     type="button"
-                                    className="btn btn-danger"
+                                    className="btn button-round text-white"
                                     data-dismiss="modal"
                                   >
                                     {t("details.6")}
                                   </button>
                                   <button
                                     type="button"
-                                    className="btn btn-success"
+                                    className="btn favorites text-white"
                                   >
                                     {t("details.7")}
                                   </button>

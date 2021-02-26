@@ -148,13 +148,13 @@
   border-radius: 5px;
 }
 .button-round:hover,
-.details-btn:hover {
+.details:hover {
   background-color: #e32929 !important;
   box-shadow: 0px 15px 25px -5px #f082566c !important;
   transform: scale(1.03);
 }
 .button-round:active,
-.details-btn:active {
+.details:active {
   background-color: #e32929 !important;
   transform: scale(0.98);
 }
@@ -218,7 +218,44 @@
 }
 .modal-body {
   color: black;
+  font-weight: 600;
+}
+.modal-body .data {
+  color: rgb(15, 15, 15);
+  font-weight: 400;
+}
+.modal-header {
+  background-color: #fcdf9d;
 }
 .modaltitle {
   color: black;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+}
+.details-close {
+  color: #ffffff !important;
+  background-color: #e32929;
+}
+.favorites {
+  width: auto;
+  background-color: #01991b !important;
+  border: 0;
+  outline: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.favorites:hover {
+  background-color: #01991b !important;
+  box-shadow: 0px 15px 25px -5px #f082566c !important;
+  transform: scale(1.03);
+}
+.favorites:active {
+  background-color: #01991b !important;
+  transform: scale(0.98);
+}
+.modal-content {
+  /* -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important; */
+  border-radius: 10px !important;
 }
