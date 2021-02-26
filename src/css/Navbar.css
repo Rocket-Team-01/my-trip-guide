@@ -1,9 +1,13 @@
 .navbarBorder {
   /* background: rgb(255, 212, 172); */
   border: 1px solid rgba(133, 133, 133, 0.4);
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   color: white;
+}
+/* nav-link height */
+.linkh {
+  height: 3rem !important;
 }
 .nav-link {
   color: white !important;

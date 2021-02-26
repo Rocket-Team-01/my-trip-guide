@@ -7,6 +7,7 @@ import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
 import SearchInput from "./SearchInput";
 import TranslateIcon from "@material-ui/icons/Translate";
+import ProfileIcon from "./ProfileIcon";
 
 function Header() {
   const languageContextAPI = React.useContext(LanguageContext);
@@ -25,7 +26,7 @@ function Header() {
 
   return (
     <Navbar collapseOnSelect expand="lg" className={background}>
-      <Navbar.Brand className="">
+      <Navbar.Brand className="hello">
         <Link className="text-white navbar-logo ml-1 navtitle fs-2" to="/">
           <img
             width="64"
@@ -39,20 +40,20 @@ function Header() {
       </Navbar.Brand>
       <Navbar.Toggle className="" aria-controls="responsive-navbar-nav " />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ms-auto mr-5">
-          <Link className="nav-link  mr-2" to="/">
+        <Nav className="ms-auto mr-5 justify-content-center d-flex align-items-center">
+          <Link className="nav-link linkh mr-2" to="/">
             {languageContextAPI.t("navbar.1")}
           </Link>
-          <Link className="nav-link  mr-2" to="/contact">
+          <Link className="nav-link linkh mr-2" to="/contact">
             {languageContextAPI.t("navbar.2")}
           </Link>
-          <Link className="nav-link  mr-2" to="/about">
+          <Link className="nav-link linkh mr-2" to="/about">
             {languageContextAPI.t("navbar.3")}
           </Link>
-          <Link className="nav-link  mr-2" to="/signup">
+          <Link className="nav-link linkh mr-2" to="/signup">
             {languageContextAPI.t("navbar.4")}
           </Link>
-          <Link className="nav-link  mr-2" to="/login">
+          <Link className="nav-link linkh mr-2" to="/login">
             {languageContextAPI.t("navbar.5")}
           </Link>
           <div
@@ -96,6 +97,7 @@ function Header() {
               </div>
             </div>
           </div>
+          <ProfileIcon />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

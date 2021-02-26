@@ -4,6 +4,7 @@ import Login from "../components/Login";
 import Search from "../components/Search";
 import Contact from "../components/Contact";
 import About from "../components/About";
+import ProfilePage from "../components/ProfilePage";
 import NotFound from "../components/NotFound";
 
 const pages = [
@@ -54,6 +55,13 @@ const pages = [
     isExact: false,
     component: About,
     link: "/about",
+    isActive: true,
+  },
+  {
+    title: "Profile",
+    isExact: false,
+    component: ProfilePage,
+    link: "/profilepage",
     isActive: true,
   },
   {

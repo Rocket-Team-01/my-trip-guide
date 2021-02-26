@@ -1,0 +1,17 @@
+.profileimg {
+  width: 20rem;
+  border-radius: 10rem;
+}
+.appbar {
+  background-color: #982121 !important;
+}
+
+.toggle {
+  background-color: #ffb80e !important;
+}
+
+.toggle:focus-within {
+  background-color: #e32929 !important;
+  color: black !important;
+  font-weight: bold !important;
+}
