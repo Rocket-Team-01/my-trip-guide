@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../css/Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Row,
-  Col,
-  Container,
-  Image,
-  Card,
-  Button,
-  Form,
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row, Col, Container, Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import Header from "./Header";
 import { LanguageContext } from "../context/LanguageContext";
 import fire from "../fire";
@@ -21,9 +13,8 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [hasAccount, setHasAccount] = useState(false);
   const languageContextAPI = React.useContext(LanguageContext);
-
+  let history = useHistory();
   const clearInputs = () => {
     setEmail("");
     setPassword("");
@@ -35,7 +26,6 @@ export default function SignUp() {
   };
 
   const handleLogin = (event) => {
-    event.preventDefault();
     clearErrors();
     fire
       .auth()
@@ -60,6 +50,7 @@ export default function SignUp() {
         clearInputs();
         setUser(user);
         console.log(user);
+        history.push(`/`);
       } else {
         setUser("");
       }
@@ -69,7 +60,7 @@ export default function SignUp() {
   useEffect(() => {
     authListener();
   }, []);
-  function handleSubmit() {}
+
   return (
     <div>
       <Header />
@@ -116,14 +107,11 @@ export default function SignUp() {
                     <Button
                       onClick={handleLogin}
                       variant="primary"
-                      type="submit"
+                      // type="submit"
                       id="signup-button"
                       className="shadow-none  w-50 "
-                      // onSubmit={handleSubmit()}
                     >
-                      <Link className="text-white" to="/">
-                        {languageContextAPI.t("login.login")}
-                      </Link>
+                      {languageContextAPI.t("login.login")}
                     </Button>
                   </Row>
                 </Form>
