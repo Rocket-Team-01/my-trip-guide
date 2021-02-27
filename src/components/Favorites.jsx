@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import food from "../images/food.png";
 import { GlobalContext } from "../context/GlobalState";
 function Favorites() {
-  const { watchlist, removeFromFavorities } = useContext(GlobalContext);
+  const { favoriteslist, removeFromFavorities } = useContext(GlobalContext);
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -22,9 +22,8 @@ function Favorites() {
     <div>
       <Header />
       <h1>Favorites</h1>
-      {console.log(watchlist)}
-      {watchlist.map((item, index) => (
-        // <RestaurantCard cityRest={movie} />
+      {console.log(favoriteslist)}
+      {favoriteslist.map((item, index) => (
         <div key={index}>
           <Col
             xs={12}

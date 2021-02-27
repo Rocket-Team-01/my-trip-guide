@@ -4,12 +4,13 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import "../css/Home.css";
 import { useTranslation } from "react-i18next";
+
+import "../css/Home.css";
 import food from "../images/food.png";
 import { GlobalContext } from "../context/GlobalState";
-import { IsoOutlined } from "@material-ui/icons";
 import fire from "../fire";
+
 export default function RestaurantCard(props) {
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -18,52 +19,14 @@ export default function RestaurantCard(props) {
   const [currency, setCurrency] = useState("");
   const [timing, setTiming] = useState("");
   const [address, setAddress] = useState("");
-  // const [classname, setClassname] = useState("blankheart");
 
-  const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
+  const { addtoFavorıtes } = useContext(GlobalContext);
 
-  // const watchlistDisabled = storedMovie ? true : false;
   const [user, setUser] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const [hasAccount, setHasAccount] = useState(false);
-
-  const clearInputs = () => {
-    setEmail("");
-    setPassword("");
-  };
-
-  const clearErrors = () => {
-    setEmailError("");
-    setPasswordError("");
-  };
-
-  const handleLogin = (event) => {
-    event.preventDefault();
-    clearErrors();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/invalid-email":
-          case "auth/user-disabled":
-          case "auth/user-not-found":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
 
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        clearInputs();
         setUser(user);
         console.log(user);
       } else {
@@ -129,7 +92,7 @@ export default function RestaurantCard(props) {
                       className="btn text-dark p-2 rounded-3 text-white float-right float-bottom shadow-none"
                       // disabled={storedMovie ? true : false}
                       onClick={() => {
-                        addMovieToWatchlist(item);
+                        addtoFavorıtes(item);
                       }}
                     >
                       <i className={"fas fa-heart"}></i>

@@ -1,15 +1,15 @@
 export default function AppReducer(state, action) {
   switch (action.type) {
-    case "ADD_MOVIE_TO_WATCHLIST":
+    case "ADD_RESTAURANT_TO_FAVORITESLIST":
       return {
         ...state,
-        watchlist: [action.payload, ...state.watchlist],
+        favoriteslist: [action.payload, ...state.favoriteslist],
       };
-    case "REMOVE_MOVIE_FROM_WATCHLIST":
+    case "REMOVE_RESTAURANT_FROM_FAVORITESLIST":
       return {
         ...state,
-        watchlist: state.watchlist.filter(
-          (movie) => movie.restaurant.id !== action.payload
+        favoriteslist: state.favoriteslist.filter(
+          (evet) => evet.restaurant.id !== action.payload
         ),
       };
     default:

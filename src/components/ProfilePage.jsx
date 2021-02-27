@@ -4,9 +4,6 @@ import "../css/ProfilePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Switch from "@material-ui/core/Switch";
 
-import { Container, Row, Col, Table } from "react-bootstrap";
-import ProfileLists from "./ProfileLists";
-
 function ProfilePage() {
   const [state, setState] = React.useState({
     checkedA: true,
@@ -34,7 +31,6 @@ function ProfilePage() {
               <li className="nav-item">
                 <button
                   className="btn active button-profile "
-                  // href=""
                   data-target="#profile"
                   data-toggle="tab"
                 >
@@ -44,7 +40,6 @@ function ProfilePage() {
               <li className="nav-item">
                 <button
                   className="mr-5 button-profile "
-                  // href=""
                   data-target="#edit"
                   data-toggle="tab"
                 >
@@ -189,6 +184,7 @@ function ProfilePage() {
                   </div>
                 </div>
               </div>
+              {/* ================   EDIT   ==================  */}
               <div className="tab-pane" id="edit">
                 <form>
                   <div className="form-group row">

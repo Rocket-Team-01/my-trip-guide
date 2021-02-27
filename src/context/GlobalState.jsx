@@ -3,8 +3,8 @@ import AppReducer from "./AppReducer";
 
 // initial state
 const initialState = {
-  watchlist: localStorage.getItem("watchlist")
-    ? JSON.parse(localStorage.getItem("watchlist"))
+  favoriteslist: localStorage.getItem("favoriteslist")
+    ? JSON.parse(localStorage.getItem("favoriteslist"))
     : [],
 };
 
@@ -15,25 +15,24 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
   useEffect(() => {
-    localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
+    localStorage.setItem("favoriteslist", JSON.stringify(state.favoriteslist));
     localStorage.setItem("watched", JSON.stringify(state.watched));
   }, [state]);
 
   // actions
-  const addMovieToWatchlist = (movie) => {
-    dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
+  const addtoFavorıtes = (movie) => {
+    dispatch({ type: "ADD_RESTAURANT_TO_FAVORITESLIST", payload: movie });
   };
 
   const removeFromFavorities = (id) => {
-    dispatch({ type: "REMOVE_MOVIE_FROM_WATCHLIST", payload: id });
+    dispatch({ type: "REMOVE_RESTAURANT_FROM_FAVORITESLIST", payload: id });
   };
 
   return (
     <GlobalContext.Provider
       value={{
-        watchlist: state.watchlist,
-        watched: state.watched,
-        addMovieToWatchlist,
+        favoriteslist: state.favoriteslist,
+        addtoFavorıtes,
         removeFromFavorities,
       }}
     >
