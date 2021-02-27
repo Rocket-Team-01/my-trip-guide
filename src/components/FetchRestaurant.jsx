@@ -4,7 +4,6 @@ import { Spinner } from "react-bootstrap";
 
 function FetchRestaurant(props) {
   const [loading, setLoading] = useState(false);
-
   const [result, setResult] = useState([]);
 
   var requestOptions = {

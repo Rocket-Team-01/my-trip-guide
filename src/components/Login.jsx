@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -12,8 +12,84 @@ import {
 } from "react-bootstrap";
 import Header from "./Header";
 import { LanguageContext } from "../context/LanguageContext";
+import fire from "../fire";
+
 export default function SignUp() {
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [hasAccount, setHasAccount] = useState(false);
   const languageContextAPI = React.useContext(LanguageContext);
+
+  const clearInputs = () => {
+    setEmail("");
+    setPassword("");
+  };
+
+  const clearErrors = () => {
+    setEmailError("");
+    setPasswordError("");
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    clearErrors();
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
+
+  const handleSignUp = (event) => {
+    clearErrors();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
+
+  const handleLogout = () => {
+    fire.auth().signOut();
+  };
+
+  const authListener = () => {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        clearInputs();
+        setUser(user);
+      } else {
+        setUser("");
+      }
+    });
+  };
+
+  useEffect(() => {
+    authListener();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -35,17 +111,30 @@ export default function SignUp() {
                     <Form.Label>
                       {languageContextAPI.t("login.username")}
                     </Form.Label>
-                    <Form.Control type="text" />
+                    <Form.Control
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <p> {emailError} </p>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPassword">
                     <Form.Label>
                       {languageContextAPI.t("login.password")}
                     </Form.Label>
-                    <Form.Control type="password" />
+                    <Form.Control
+                      type="password"
+                      required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <p> {passwordError} </p>
                   </Form.Group>
                   <Row className="d-flex justify-content-center mt-5 ">
                     <Button
+                      onClick={handleLogin}
                       variant="primary"
                       type="submit"
                       id="signup-button"
