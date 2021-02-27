@@ -69,7 +69,7 @@ export default function SignUp() {
   useEffect(() => {
     authListener();
   }, []);
-
+  function handleSubmit() {}
   return (
     <div>
       <Header />
@@ -113,17 +113,18 @@ export default function SignUp() {
                     <p> {passwordError} </p>
                   </Form.Group>
                   <Row className="d-flex justify-content-center mt-5 ">
-                    <Link className="text-white" to="/">
-                      <Button
-                        onClick={handleLogin}
-                        variant="primary"
-                        type="submit"
-                        id="signup-button"
-                        className="shadow-none  w-50 "
-                      >
+                    <Button
+                      onClick={handleLogin}
+                      variant="primary"
+                      type="submit"
+                      id="signup-button"
+                      className="shadow-none  w-50 "
+                      // onSubmit={handleSubmit()}
+                    >
+                      <Link className="text-white" to="/">
                         {languageContextAPI.t("login.login")}
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
                   </Row>
                 </Form>
               </Col>
