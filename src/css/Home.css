@@ -259,3 +259,11 @@
   -moz-border-radius: 10px !important; */
   border-radius: 10px !important;
 }
+.notfnd {
+  width: 50vh;
+}
+.page-title {
+  color: black;
+  font-family: "Libre Baskerville", serif;
+  /* font-weight: 700; */
+}
