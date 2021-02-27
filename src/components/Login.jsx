@@ -10,6 +10,7 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import { LanguageContext } from "../context/LanguageContext";
 import fire from "../fire";
@@ -51,29 +52,6 @@ export default function SignUp() {
             break;
         }
       });
-  };
-
-  const handleSignUp = (event) => {
-    clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/weak-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
-
-  const handleLogout = () => {
-    fire.auth().signOut();
-    console.log(user);
   };
 
   const authListener = () => {
@@ -135,24 +113,17 @@ export default function SignUp() {
                     <p> {passwordError} </p>
                   </Form.Group>
                   <Row className="d-flex justify-content-center mt-5 ">
-                    <Button
-                      onClick={handleLogin}
-                      variant="primary"
-                      type="submit"
-                      id="signup-button"
-                      className="shadow-none  w-50 "
-                    >
-                      {languageContextAPI.t("login.login")}
-                    </Button>
-                    <Button
-                      onClick={handleLogout}
-                      variant="primary"
-                      type="submit"
-                      id="signup-button1"
-                      className="shadow-none  w-50 "
-                    >
-                      Logout
-                    </Button>
+                    <Link className="text-white" to="/">
+                      <Button
+                        onClick={handleLogin}
+                        variant="primary"
+                        type="submit"
+                        id="signup-button"
+                        className="shadow-none  w-50 "
+                      >
+                        {languageContextAPI.t("login.login")}
+                      </Button>
+                    </Link>
                   </Row>
                 </Form>
               </Col>
