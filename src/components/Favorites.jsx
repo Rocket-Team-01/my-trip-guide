@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import Header from "./Header";
 import { Row, Col, Container } from "react-bootstrap";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -8,9 +9,8 @@ import "../css/Home.css";
 import { useTranslation } from "react-i18next";
 import food from "../images/food.png";
 import { GlobalContext } from "../context/GlobalState";
-import { IsoOutlined } from "@material-ui/icons";
-
-export default function RestaurantCard(props) {
+function Favorites() {
+  const { watchlist, removeFromFavorities } = useContext(GlobalContext);
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -18,16 +18,14 @@ export default function RestaurantCard(props) {
   const [currency, setCurrency] = useState("");
   const [timing, setTiming] = useState("");
   const [address, setAddress] = useState("");
-  // const [classname, setClassname] = useState("blankheart");
-
-  const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
-
-  // const watchlistDisabled = storedMovie ? true : false;
-
   return (
-    <Container>
-      <Row className="py-5 justify-content-center align-items-center text-center ">
-        {props.cityRest.map((item, index) => (
+    <div>
+      <Header />
+      <h1>Favorites</h1>
+      {console.log(watchlist)}
+      {watchlist.map((item, index) => (
+        // <RestaurantCard cityRest={movie} />
+        <div key={index}>
           <Col
             xs={12}
             sm={12}
@@ -49,7 +47,6 @@ export default function RestaurantCard(props) {
                   >
                     {item.restaurant.user_rating.aggregate_rating}
                   </span>
-
                   {item.restaurant.featured_image ? (
                     <CardMedia
                       className={` m-0 p-0 rest-img`}
@@ -72,15 +69,6 @@ export default function RestaurantCard(props) {
                   xl={8}
                   className="text-center justify-content-center"
                 >
-                  <button
-                    className="btn text-dark p-2 rounded-3 text-white float-right float-bottom shadow-none"
-                    // disabled={storedMovie ? true : false}
-                    onClick={() => {
-                      addMovieToWatchlist(item);
-                    }}
-                  >
-                    <i className={"fas fa-heart"}></i>
-                  </button>
                   <div>
                     <CardContent
                       className=" text-center d-block mx-auto"
@@ -121,7 +109,6 @@ export default function RestaurantCard(props) {
                           >
                             {t("details.2")}
                           </button>
-
                           <div
                             className="modal fade"
                             id="exampleModal"
@@ -172,6 +159,12 @@ export default function RestaurantCard(props) {
                                   >
                                     {t("details.6")}
                                   </button>
+                                  <button
+                                    type="button"
+                                    className="btn favorites text-white"
+                                  >
+                                    {t("details.7")}
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -184,8 +177,16 @@ export default function RestaurantCard(props) {
               </Row>
             </Card>
           </Col>
-        ))}
-      </Row>
-    </Container>
+          <button
+            className="ctrl-btn"
+            onClick={() => removeFromFavorities(item.restaurant.id)}
+          >
+            <i className="fa-fw fa fa-times"></i>
+          </button>
+        </div>
+      ))}
+    </div>
   );
 }
+
+export default Favorites;

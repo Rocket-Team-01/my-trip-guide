@@ -37,6 +37,7 @@ function FetchRestaurant(props) {
       .then((res) => {
         setResult(res.restaurants);
         console.log("fetch");
+        setLoading(true);
       })
       .catch((error) => console.log("error", error));
   }
@@ -56,7 +57,7 @@ function FetchRestaurant(props) {
   return (
     <div className="pb-5 ">
       {loading ? (
-        result.length > 0 ? (
+        result.length >= 0 ? (
           <RestaurantCard cityRest={result} />
         ) : (
           ""

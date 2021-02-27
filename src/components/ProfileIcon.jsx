@@ -111,7 +111,11 @@ export default function MenuListComposition() {
                         Profile
                       </Link>
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>My favorites</MenuItem>
+                    <MenuItem>
+                      <Link to="/favorites" className="text-dark">
+                        My favorites
+                      </Link>
+                    </MenuItem>
                     <MenuItem onClick={handleClose}>My wishlist</MenuItem>
                     <MenuItem onClick={handleClose}>Logout</MenuItem>
                   </MenuList>

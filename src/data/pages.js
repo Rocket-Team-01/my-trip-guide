@@ -5,6 +5,7 @@ import Search from "../components/Search";
 import Contact from "../components/Contact";
 import About from "../components/About";
 import ProfilePage from "../components/ProfilePage";
+import Favorites from "../components/Favorites";
 import NotFound from "../components/NotFound";
 
 const pages = [
@@ -62,6 +63,13 @@ const pages = [
     isExact: false,
     component: ProfilePage,
     link: "/profilepage",
+    isActive: true,
+  },
+  {
+    title: "Favorities",
+    isExact: false,
+    component: Favorites,
+    link: "/favorites",
     isActive: true,
   },
   {

@@ -15,6 +15,7 @@ function Context(props) {
     setLang("ENG");
     i18next.changeLanguage("en");
   }, []);
+
   return (
     <LanguageContext.Provider value={{ t, handleClick, setLang, lang }}>
       {props.children}
