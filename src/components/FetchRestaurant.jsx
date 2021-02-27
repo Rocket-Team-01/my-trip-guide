@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { Spinner } from "react-bootstrap";
 
 function FetchRestaurant(props) {
+  const [loading, setLoading] = useState(false);
+
   const [result, setResult] = useState([]);
 
   var requestOptions = {
@@ -47,11 +50,26 @@ function FetchRestaurant(props) {
       .then((res) => {
         setResult(res.restaurants);
         console.log("fetch");
+        setLoading(true);
       })
       .catch((error) => console.log("error", error));
   }
   return (
-    <div>{result.length > 0 ? <RestaurantCard cityRest={result} /> : ""}</div>
+    <div className="pb-5 ">
+      {loading ? (
+        result.length > 0 ? (
+          <RestaurantCard cityRest={result} />
+        ) : (
+          ""
+        )
+      ) : (
+        <Spinner
+          animation="border"
+          variant="danger"
+          className="d-block mx-auto"
+        />
+      )}
+    </div>
   );
 }
 

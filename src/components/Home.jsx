@@ -1,4 +1,4 @@
-import { Container, Image, Col, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import "../css/Home.css";
@@ -11,6 +11,7 @@ export default function Home(props) {
   const languageContextAPI = React.useContext(LanguageContext);
   const [result, setResult] = useState([]);
   const [city, setCity] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     var requestOptions = {
@@ -89,3 +90,9 @@ export default function Home(props) {
     </div>
   );
 }
+/*
+<Spinner animation="border" />
+*/
+/*
+<FetchRestaurant query={city} category={""} />
+*/
