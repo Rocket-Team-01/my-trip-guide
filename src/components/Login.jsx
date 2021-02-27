@@ -73,6 +73,7 @@ export default function SignUp() {
 
   const handleLogout = () => {
     fire.auth().signOut();
+    console.log(user);
   };
 
   const authListener = () => {
@@ -80,6 +81,7 @@ export default function SignUp() {
       if (user) {
         clearInputs();
         setUser(user);
+        console.log(user);
       } else {
         setUser("");
       }
@@ -141,6 +143,15 @@ export default function SignUp() {
                       className="shadow-none  w-50 "
                     >
                       {languageContextAPI.t("login.login")}
+                    </Button>
+                    <Button
+                      onClick={handleLogout}
+                      variant="primary"
+                      type="submit"
+                      id="signup-button1"
+                      className="shadow-none  w-50 "
+                    >
+                      Logout
                     </Button>
                   </Row>
                 </Form>
