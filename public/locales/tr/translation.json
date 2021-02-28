@@ -29,7 +29,9 @@
   "login": {
     "login": "Giriş Yap",
     "username": "Kullanıcı Adı",
-    "password": "Şifre"
+    "password": "Şifre",
+    "or": "ya da",
+    "continue-with-google":"Google ile devam et"
   },
   "signup": {
     "signup": "Kaydol",

@@ -29,7 +29,9 @@
   "login": {
     "login": "Login",
     "username": "Username",
-    "password": "Password"
+    "password": "Password",
+    "or": "or",
+    "continue-with-google":"Continue with Google"
   },
   "signup": {
     "signup": "Signup",

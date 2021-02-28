@@ -144,7 +144,7 @@ export default function SignUp() {
                   </Row>
                   <Row>
                     <strong className="d-flex justify-content-center mt-2 ">
-                      or
+                    {languageContextAPI.t("login.or")}
                     </strong>
                   </Row>
                   <Row className="d-flex justify-content-center mt-2 ">
@@ -159,7 +159,7 @@ export default function SignUp() {
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"
                         alt="googleicon"
                       />
-                      <span className="ml-2">Continue with Google</span>
+                      <span className="ml-2">{languageContextAPI.t("login.continue-with-google")}</span>
                     </Button>
                   </Row>
                 </Form>
