@@ -11,6 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
 import "../css/ProfilePage.css";
 import fire from "../fire";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,7 @@ export default function MenuListComposition() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
 
   const clearInputs = () => {
     setEmail("");
@@ -47,7 +49,8 @@ export default function MenuListComposition() {
 
   const handleLogout = () => {
     fire.auth().signOut();
-    console.log(user);
+
+    history.push("/");
   };
 
   const authListener = () => {
@@ -110,7 +113,11 @@ export default function MenuListComposition() {
         >
           <Avatar
             alt="Random Profile"
-            src="https://randomuser.me/api/portraits/lego/8.jpg"
+            src={
+              user.photoURL
+                ? user.photoURL
+                : "https://randomuser.me/api/portraits/lego/8.jpg"
+            }
             className="img-width"
           />
         </Button>

@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import "../css/ProfilePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Switch from "@material-ui/core/Switch";
+import fire from "../fire";
 
 function ProfilePage() {
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const clearInputs = () => {
+    setEmail("");
+    setPassword("");
+  };
+
+  const authListener = () => {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        clearInputs();
+        setUser(user);
+      } else {
+        setUser("");
+      }
+    });
+  };
+
+  useEffect(() => {
+    authListener();
+  }, []);
   const [state, setState] = React.useState({
     checkedA: true,
     checkedB: true,
@@ -61,7 +85,10 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value="daleeuser"
+                            value={
+                              user.displayName ? user.displayName : "Email User"
+                            }
+                            readOnly
                           />
                         </div>
                       </div>
@@ -73,7 +100,12 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value="Dale"
+                            value={
+                              user.displayName
+                                ? user.displayName.split(" ")[0]
+                                : "-"
+                            }
+                            readOnly
                           />
                         </div>
                       </div>
@@ -85,7 +117,12 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value="Richardson"
+                            value={
+                              user.displayName
+                                ? user.displayName.split(" ")[1]
+                                : "-"
+                            }
+                            readOnly
                           />
                         </div>
                       </div>
@@ -97,7 +134,10 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="email"
-                            value="dale.richardson@example.com"
+                            value={
+                              user.email ? user.email : "example@gmail.com"
+                            }
+                            readOnly
                           />
                         </div>
                       </div>
@@ -109,7 +149,8 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value="(407)-954-0623"
+                            value={user.phoneNumber ? user.phoneNumber : "-"}
+                            readOnly
                           />
                         </div>
                       </div>
@@ -121,7 +162,7 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value=""
+                            defaultValue=""
                             placeholder="Street"
                           />
                         </div>
@@ -132,7 +173,7 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value=""
+                            defaultValue=""
                             placeholder="City"
                           />
                         </div>
@@ -140,7 +181,7 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="text"
-                            value=""
+                            defaultValue=""
                             placeholder="State"
                           />
                         </div>
@@ -154,7 +195,7 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="password"
-                            value="11111122333"
+                            defaultValue="11111122333"
                           />
                         </div>
                       </div>
@@ -166,7 +207,7 @@ function ProfilePage() {
                           <input
                             className="form-control"
                             type="password"
-                            value="11111122333"
+                            defaultValue="11111122333"
                           />
                         </div>
                       </div>
@@ -176,7 +217,7 @@ function ProfilePage() {
                           <input
                             type="button"
                             className="btn btn-primary"
-                            value="Change"
+                            defaultValue="Change"
                           />
                         </div>
                       </div>
@@ -274,7 +315,11 @@ function ProfilePage() {
           </div>
           <div className="col-lg-4 order-lg-1 text-center">
             <img
-              src="https://randomuser.me/api/portraits/lego/8.jpg"
+              src={
+                user.photoURL
+                  ? user.photoURL
+                  : "https://randomuser.me/api/portraits/lego/8.jpg"
+              }
               className=" img-width img-circle w-50"
               alt="avatar"
             />
