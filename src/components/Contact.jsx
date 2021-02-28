@@ -107,13 +107,13 @@ export default function Contact() {
                 <h2>Ali Said Güneş</h2>
               </Row>
               <Row className="mx-auto  mt-2 mb-3">
-                <Col xs={4} sm={4} md={4} className="text-info">
+                <Col xs={4} sm={4} md={4}>
                   <a href="https://www.linkedin.com/in/ali-said-g%C3%BCne%C5%9F-990834186/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#0072b1"
                       className="bi bi-linkedin"
                       viewBox="0 0 16 16"
                     >
@@ -121,13 +121,13 @@ export default function Contact() {
                     </svg>
                   </a>
                 </Col>
-                <Col xs={4} sm={4} md={4} className="text-info">
+                <Col xs={4} sm={4} md={4} className="text-dark">
                   <a href="https://github.com/alisaid1gunes">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="black"
                       className="bi bi-github"
                       viewBox="0 0 16 16"
                     >
@@ -141,7 +141,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#ea4335"
                       className="bi bi-envelope-fill"
                       viewBox="0 0 16 16"
                     >
@@ -170,7 +170,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#0072b1"
                       className="bi bi-linkedin"
                       viewBox="0 0 16 16"
                     >
@@ -184,7 +184,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="black"
                       className="bi bi-github"
                       viewBox="0 0 16 16"
                     >
@@ -198,7 +198,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#ea4335"
                       className="bi bi-envelope-fill"
                       viewBox="0 0 16 16"
                     >
@@ -227,7 +227,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#0072b1"
                       className="bi bi-linkedin"
                       viewBox="0 0 16 16"
                     >
@@ -241,7 +241,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="black"
                       className="bi bi-github"
                       viewBox="0 0 16 16"
                     >
@@ -255,7 +255,7 @@ export default function Contact() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      fill="currentColor"
+                      fill="#ea4335"
                       className="bi bi-envelope-fill"
                       viewBox="0 0 16 16"
                     >
