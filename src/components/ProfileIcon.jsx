@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import "../css/ProfilePage.css";
 import fire from "../fire";
 import { useHistory } from "react-router-dom";
-
+import { LanguageContext } from "../context/LanguageContext";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MenuListComposition() {
+  const languageContextAPI = React.useContext(LanguageContext);
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -145,16 +146,16 @@ export default function MenuListComposition() {
                   >
                     <MenuItem onClick={handleClose}>
                       <Link to="/profilepage" className="text-dark">
-                        Profile
+                      {languageContextAPI.t("profile.5")}
                       </Link>
                     </MenuItem>
                     <MenuItem>
                       <Link to="/favorites" className="text-dark">
-                        My favorites
+                      {languageContextAPI.t("profile.24")}
                       </Link>
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>My wishlist</MenuItem>
-                    <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                    <MenuItem onClick={handleClose}>{languageContextAPI.t("profile.25")}</MenuItem>
+                    <MenuItem onClick={handleLogout}>{languageContextAPI.t("profile.26")}</MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

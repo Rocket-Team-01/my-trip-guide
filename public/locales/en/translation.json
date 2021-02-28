@@ -107,7 +107,10 @@
     "20": "Someone follows me",
     "21": "My friends join Restaurant Searcher",
     "22": "Important updates from Restaurant Searcher",
-    "23": "Weekly newsletter"
+    "23": "Weekly newsletter",
+    "24": "My favorites",
+    "25": "My wishlist",
+    "26": "Logout"
   },
   "myfavorites": {
     "1": "My Favorite Restaurants"
