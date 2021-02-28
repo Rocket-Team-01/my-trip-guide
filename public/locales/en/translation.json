@@ -108,5 +108,8 @@
     "21": "My friends join Restaurant Searcher",
     "22": "Important updates from Restaurant Searcher",
     "23": "Weekly newsletter"
+  },
+  "myfavorites": {
+    "1": "My Favorite Restaurants"
   }
 }

@@ -9,6 +9,7 @@ import "../css/Home.css";
 import { useTranslation } from "react-i18next";
 import food from "../images/food.png";
 import { GlobalContext } from "../context/GlobalState";
+import { LanguageContext } from "../context/LanguageContext";
 function Favorites() {
   const { favoriteslist, removeFromFavorities } = useContext(GlobalContext);
   const { t } = useTranslation();
@@ -18,11 +19,12 @@ function Favorites() {
   const [currency, setCurrency] = useState("");
   const [timing, setTiming] = useState("");
   const [address, setAddress] = useState("");
+  const languageContextAPI = React.useContext(LanguageContext);
   return (
     <div>
       <Header />
       <h1 className="text-center py-5 bg-light m-0 minititle">
-        My Favorite Restaurants
+      {languageContextAPI.t("myfavorites.1")}
       </h1>
       {console.log(favoriteslist)}
       {favoriteslist.map((item, index) => (
