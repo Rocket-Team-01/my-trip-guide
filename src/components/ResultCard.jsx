@@ -22,7 +22,9 @@ function ResultCard(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const { addtoFavorıtes, favoriteslist } = useContext(GlobalContext);
+  const { addtoFavorıtes, favoriteslist, removeFromFavorities } = useContext(
+    GlobalContext
+  );
 
   let storedRest = favoriteslist.find(
     (o) => o.restaurant.id === item.restaurant.id
@@ -45,7 +47,12 @@ function ResultCard(props) {
     authListener();
   }, []);
   function handleClick(item) {
-    addtoFavorıtes(item);
+    let storedRest = favoriteslist.find(
+      (o) => o.restaurant.id === item.restaurant.id
+    );
+    storedRest
+      ? removeFromFavorities(item.restaurant.id)
+      : addtoFavorıtes(item);
   }
 
   return (
