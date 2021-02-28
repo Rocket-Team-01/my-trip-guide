@@ -199,13 +199,13 @@
   height: 14rem !important;
 }
 .rest-card {
-  /* min-height: 12rem; */
-  height: 14rem;
+  min-height: 12rem;
+  height: auto;
   background-color: #ffffff !important;
   /* position: relative; */
 }
 .rest-card img {
-  height: 14rem !important;
+  height: 12rem !important;
 }
 .detail-group {
   position: relative;
@@ -248,13 +248,28 @@
   border-radius: 5px;
 }
 
-.fa-heart {
+.favorites:focus {
+  outline: none !important;
+}
+
+.favorite {
   color: rgb(255, 0, 0);
   font-size: x-large;
   outline: none !important;
 }
-
-.favorites:focus {
+.favorite::after {
+  color: rgb(255, 0, 0);
+  font-size: x-large;
+  outline: none !important;
+}
+.notfavorite {
+  color: rgb(175, 175, 175);
+  font-size: x-large;
+  outline: none !important;
+}
+.notfavorite::after {
+  color: rgb(175, 175, 175);
+  font-size: x-large;
   outline: none !important;
 }
 .modal-content {
@@ -269,4 +284,8 @@
   color: black;
   font-family: "Libre Baskerville", serif;
   /* font-weight: 700; */
+}
+.fa-times {
+  color: #b32121;
+  font-size: large;
 }

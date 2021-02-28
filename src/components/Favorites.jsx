@@ -21,7 +21,9 @@ function Favorites() {
   return (
     <div>
       <Header />
-      <h1>Favorites</h1>
+      <h1 className="text-center py-5 bg-light m-0 minititle">
+        My Favorite Restaurants
+      </h1>
       {console.log(favoriteslist)}
       {favoriteslist.map((item, index) => (
         <div key={index}>
@@ -69,6 +71,12 @@ function Favorites() {
                   className="text-center justify-content-center"
                 >
                   <div>
+                    <button
+                      className="btn float-top float-right"
+                      onClick={() => removeFromFavorities(item.restaurant.id)}
+                    >
+                      <i className="fa-fw fa fa-times"></i>
+                    </button>
                     <CardContent
                       className=" text-center d-block mx-auto"
                       align="center"
@@ -108,6 +116,7 @@ function Favorites() {
                           >
                             {t("details.2")}
                           </button>
+
                           <div
                             className="modal fade"
                             id="exampleModal"
@@ -158,12 +167,6 @@ function Favorites() {
                                   >
                                     {t("details.6")}
                                   </button>
-                                  <button
-                                    type="button"
-                                    className="btn favorites text-white"
-                                  >
-                                    {t("details.7")}
-                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -176,12 +179,6 @@ function Favorites() {
               </Row>
             </Card>
           </Col>
-          <button
-            className="ctrl-btn"
-            onClick={() => removeFromFavorities(item.restaurant.id)}
-          >
-            <i className="fa-fw fa fa-times"></i>
-          </button>
         </div>
       ))}
     </div>

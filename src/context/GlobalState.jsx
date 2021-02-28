@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useEffect } from "react";
+import React, { createContext, useReducer, useEffect, useState } from "react";
 import AppReducer from "./AppReducer";
 
 // initial state
@@ -13,6 +13,8 @@ export const GlobalContext = createContext(initialState);
 
 // provider components
 export const GlobalProvider = (props) => {
+  const [favicon, setFavicon] = useState("notfavorite");
+  const [disabled, setDisabled] = useState(false);
   const [state, dispatch] = useReducer(AppReducer, initialState);
   useEffect(() => {
     localStorage.setItem("favoriteslist", JSON.stringify(state.favoriteslist));
@@ -20,8 +22,20 @@ export const GlobalProvider = (props) => {
   }, [state]);
 
   // actions
-  const addtoFavorıtes = (movie) => {
-    dispatch({ type: "ADD_RESTAURANT_TO_FAVORITESLIST", payload: movie });
+  const addtoFavorıtes = (restaurant) => {
+    dispatch({ type: "ADD_RESTAURANT_TO_FAVORITESLIST", payload: restaurant });
+
+    // state.favoriteslist.find(
+    //   (o) => o.restaurant.id === restaurant.restaurant.id
+    // )
+    //   ? setDisabled(true)
+    //   : setDisabled(false);
+
+    state.favoriteslist.find(
+      (o) => o.restaurant.id === restaurant.restaurant.id
+    )
+      ? setFavicon("favorite")
+      : setFavicon("notfavorite");
   };
 
   const removeFromFavorities = (id) => {
@@ -34,6 +48,8 @@ export const GlobalProvider = (props) => {
         favoriteslist: state.favoriteslist,
         addtoFavorıtes,
         removeFromFavorities,
+        favicon,
+        setFavicon,
       }}
     >
       {props.children}
