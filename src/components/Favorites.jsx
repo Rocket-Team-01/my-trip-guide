@@ -42,7 +42,7 @@ function Favorites() {
               <Row>
                 <Col xs={12} sm={5} md={5} lg={5} xl={4} className="">
                   <span
-                    className="p-2 rounded-3 text-white float-left"
+                    className="p-2 rounded-3 text-white float-left text-center"
                     style={{
                       backgroundColor: `#${item.restaurant.user_rating.rating_color}`,
                       width: "50px",
