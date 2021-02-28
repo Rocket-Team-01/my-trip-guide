@@ -30,7 +30,6 @@ export default function RestaurantCard(props) {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
-        console.log(user);
       } else {
         setUser("");
       }

@@ -58,7 +58,6 @@ export default function MenuListComposition() {
       if (user) {
         clearInputs();
         setUser(user);
-        console.log(user);
       } else {
         setUser("");
       }

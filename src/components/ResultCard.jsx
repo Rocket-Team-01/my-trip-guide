@@ -1,11 +1,11 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import Card from "@material-ui/core/Card";
+import Modal from "@material-ui/core/Modal";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { useTranslation } from "react-i18next";
-
 import "../css/Home.css";
 import food from "../images/food.png";
 import { GlobalContext } from "../context/GlobalState";
@@ -14,16 +14,15 @@ import fire from "../fire";
 function ResultCard(props) {
   const { item, index } = props;
   const { t } = useTranslation();
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [cost, setCost] = useState("");
-  const [currency, setCurrency] = useState("");
-  const [timing, setTiming] = useState("");
-  const [address, setAddress] = useState("");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-  const { addtoFavorıtes, favicon, setFavicon, favoriteslist } = useContext(
-    GlobalContext
-  );
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const { addtoFavorıtes, favoriteslist } = useContext(GlobalContext);
 
   let storedRest = favoriteslist.find(
     (o) => o.restaurant.id === item.restaurant.id
@@ -36,7 +35,6 @@ function ResultCard(props) {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
-        console.log(user);
       } else {
         setUser("");
       }
@@ -48,11 +46,8 @@ function ResultCard(props) {
   }, []);
   function handleClick(item) {
     addtoFavorıtes(item);
-
-    // favoriteslist.find((o) => o.restaurant.id === item.restaurant.id)
-    //   ? setFavicon("favorite")
-    //   : setFavicon("notfavorite");
   }
+
   return (
     <Col
       xs={12}
@@ -138,24 +133,17 @@ function ResultCard(props) {
                       className="btn mx-auto float-center details "
                       data-toggle="modal"
                       data-target="#exampleModal"
-                      onClick={() => {
-                        setName(item.restaurant.name);
-                        setNumber(item.restaurant.phone_numbers.slice(0, 12));
-                        setCost(item.restaurant.average_cost_for_two);
-                        setCurrency(item.restaurant.currency);
-                        setTiming(item.restaurant.timings);
-                        setAddress(item.restaurant.location.address);
-                      }}
+                      onClick={handleOpen}
                     >
                       {t("details.2")}
                     </button>
 
-                    <div
-                      className="modal fade"
-                      id="exampleModal"
-                      tabIndex="-1"
-                      aria-labelledby="myLargeModalLabel"
-                      aria-hidden="true"
+                    <Modal
+                      open={open}
+                      onClose={handleClose}
+                      aria-labelledby="simple-modal-title"
+                      aria-describedby="simple-modal-description"
+                      className="text-center"
                     >
                       <div className="modal-dialog modal-dialog-centered modal-lg">
                         <div className="modal-content">
@@ -165,9 +153,10 @@ function ResultCard(props) {
                                 className="modal-title modaltitle text-center"
                                 id="exampleModalLabel"
                               >
-                                {name} <br />
+                                {item.restaurant.name} <br />
                                 <span className=" bg-success rounded-3 text-white p-1 text-center">
-                                  {number} <i className="fas fa-phone"></i>
+                                  {item.restaurant.phone_numbers.slice(0, 12)}{" "}
+                                  <i className="fas fa-phone"></i>
                                 </span>
                               </h5>
                             </div>
@@ -176,6 +165,7 @@ function ResultCard(props) {
                               className="close pl-0 ml-0"
                               data-dismiss="modal"
                               aria-label="Close"
+                              onClick={handleClose}
                             >
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -183,26 +173,33 @@ function ResultCard(props) {
                           <div className="modal-body ">
                             {t("details.3")}:{" "}
                             <span className="data ">
-                              {cost} {currency}
+                              {item.restaurant.average_cost_for_two}{" "}
+                              {item.restaurant.currency}
                             </span>{" "}
                             <br />
                             {t("details.4")}:{" "}
-                            <span className="data">{timing}</span> <br />
+                            <span className="data">
+                              {item.restaurant.timings}
+                            </span>{" "}
+                            <br />
                             {t("details.5")}:{" "}
-                            <span className="data">{address}</span>
+                            <span className="data">
+                              {item.restaurant.location.address}
+                            </span>
                           </div>
                           <div className="modal-footer mx-auto">
                             <button
                               type="button"
                               className="btn button-round text-white"
                               data-dismiss="modal"
+                              onClick={handleClose}
                             >
                               {t("details.6")}
                             </button>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Modal>
                   </div>
                 </Typography>
               </CardContent>

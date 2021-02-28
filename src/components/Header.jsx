@@ -24,7 +24,6 @@ function Header() {
       if (user) {
         clearInputs();
         setUser(user);
-        console.log(user);
       } else {
         setUser("");
       }
@@ -40,13 +39,11 @@ function Header() {
   let location = useLocation();
 
   const { pathname } = location;
-  console.log(`location : ${pathname}`);
 
   React.useEffect(() => {
     pathname === "/"
       ? setBackground("navbarBorder")
       : setBackground("navbarBorderr");
-    console.log(background);
   }, [pathname, background]);
 
   return (
