@@ -111,5 +111,10 @@
   },
   "myfavorites": {
     "1": "My Favorite Restaurants"
+  },
+  "footer": {
+    "SiteLinks": "Site Links",
+    "GithubLinks": "Github Links",
+    "Thanks": "Thanks"
   }
 }

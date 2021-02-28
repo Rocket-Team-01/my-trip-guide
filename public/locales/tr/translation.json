@@ -111,5 +111,10 @@
   },
   "myfavorites": {
     "1": "Favori Restoranlarım"
+  },
+  "footer": {
+    "SiteLinks": "Site Linkleri",
+    "GithubLinks": "Github Linkleri",
+    "Thanks": "Teşekkürler"
   }
 }
