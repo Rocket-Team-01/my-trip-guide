@@ -83,5 +83,30 @@
     "4": "Within the scope of this project, home page content It consists of restaurants close by. In the search section Restaurants in the searched city will be displayed. In our project used technologies:",
     "5": "What the project brings to us ?",
     "6": "During the project, we reinforced the subjects we learned in the course At the same time, we went beyond what we learned.We discovered the intricacies of document reading, research and team play."
+  },
+  "profile": {
+    "1": "Upload a different photo",
+    "2": "Choose file",
+    "3": "Followers",
+    "4": "Views",
+    "5": "Profile",
+    "6": "Prefences",
+    "7": "User Profile",
+    "8": "Username",
+    "9": "First name",
+    "10": "Last name",
+    "11": "Email",
+    "12": "Phone",
+    "13": "Address",
+    "14": "Street",
+    "15": "City",
+    "16": "State",
+    "17": "Password",
+    "18": "Confirm Password",
+    "19": "Change",
+    "20": "Someone follows me",
+    "21": "My friends join Restaurant Searcher",
+    "22": "Important updates from Restaurant Searcher",
+    "23": "Weekly newsletter"
   }
 }

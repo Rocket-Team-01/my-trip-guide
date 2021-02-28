@@ -4,12 +4,12 @@ import "../css/ProfilePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Switch from "@material-ui/core/Switch";
 import fire from "../fire";
-
+import { LanguageContext } from "../context/LanguageContext";
 function ProfilePage() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const languageContextAPI = React.useContext(LanguageContext);
   const clearInputs = () => {
     setEmail("");
     setPassword("");
@@ -58,7 +58,7 @@ function ProfilePage() {
                   data-target="#profile"
                   data-toggle="tab"
                 >
-                  Profile
+                  {languageContextAPI.t("profile.5")}
                 </button>
               </li>
               <li className="nav-item">
@@ -67,7 +67,7 @@ function ProfilePage() {
                   data-target="#edit"
                   data-toggle="tab"
                 >
-                  Preferences
+                  {languageContextAPI.t("profile.6")}
                 </button>
               </li>
             </ul>
@@ -79,7 +79,7 @@ function ProfilePage() {
                     <form>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Username
+                        {languageContextAPI.t("profile.8")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -94,7 +94,7 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          First name
+                        {languageContextAPI.t("profile.9")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -111,7 +111,7 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Last name
+                        {languageContextAPI.t("profile.10")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -128,7 +128,7 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Email
+                        {languageContextAPI.t("profile.11")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -143,7 +143,7 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Phone
+                        {languageContextAPI.t("profile.12")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -156,14 +156,14 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Address
+                        {languageContextAPI.t("profile.13")}
                         </label>
                         <div className="col-lg-9">
                           <input
                             className="form-control"
                             type="text"
                             defaultValue=""
-                            placeholder="Street"
+                            placeholder= {languageContextAPI.t("profile.14")}
                           />
                         </div>
                       </div>
@@ -174,7 +174,7 @@ function ProfilePage() {
                             className="form-control"
                             type="text"
                             defaultValue=""
-                            placeholder="City"
+                            placeholder={languageContextAPI.t("profile.15")}
                           />
                         </div>
                         <div className="col-lg-3">
@@ -182,14 +182,14 @@ function ProfilePage() {
                             className="form-control"
                             type="text"
                             defaultValue=""
-                            placeholder="State"
+                            placeholder={languageContextAPI.t("profile.16")}
                           />
                         </div>
                       </div>
 
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Password
+                        {languageContextAPI.t("profile.17")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -201,7 +201,7 @@ function ProfilePage() {
                       </div>
                       <div className="form-group row">
                         <label className="col-lg-3 col-form-label form-control-label">
-                          Confirm password
+                        {languageContextAPI.t("profile.18")}
                         </label>
                         <div className="col-lg-9">
                           <input
@@ -217,7 +217,7 @@ function ProfilePage() {
                           <input
                             type="button"
                             className="btn btn-primary"
-                            defaultValue="Change"
+                            defaultValue={languageContextAPI.t("profile.19")}
                           />
                         </div>
                       </div>
@@ -230,12 +230,12 @@ function ProfilePage() {
                 <form>
                   <div className="form-group row">
                     <div className="col-lg-6"></div>
-                    <div className="col-lg-1 col-sm-1 ">Email</div>
-                    <div className="col-lg-1 col-sm-1  ">Phone</div>
+                    <div className="col-lg-1 col-sm-1 ">{languageContextAPI.t("profile.11")}</div>
+                    <div className="col-lg-1 col-sm-1  ">{languageContextAPI.t("profile.12")}</div>
                   </div>
                   <div className="form-group row">
                     <label className="col-lg-6 col-form-label form-control-label ">
-                      Someone follows me
+                    {languageContextAPI.t("profile.20")}
                     </label>
                     <div className="col-lg-6 ">
                       <Switch
@@ -254,7 +254,7 @@ function ProfilePage() {
                   </div>
                   <div className="form-group row">
                     <label className="col-lg-6 col-form-label form-control-label">
-                      My friends join Restaurant Searcher
+                    {languageContextAPI.t("profile.21")}
                     </label>
                     <div className="col-lg-6 ">
                       <Switch
@@ -273,7 +273,7 @@ function ProfilePage() {
                   </div>
                   <div className="form-group row">
                     <label className="col-lg-6 col-form-label form-control-label">
-                      Important updates from Restaurant Searcher
+                    {languageContextAPI.t("profile.22")}
                     </label>
                     <div className="col-lg-6 ">
                       <Switch
@@ -292,7 +292,7 @@ function ProfilePage() {
                   </div>
                   <div className="form-group row">
                     <label className="col-lg-6 col-form-label form-control-label">
-                      Weekly Newsletter
+                    {languageContextAPI.t("profile.23")}
                     </label>
                     <div className="col-lg-6 ">
                       <Switch
@@ -323,20 +323,18 @@ function ProfilePage() {
               className=" img-width img-circle w-50"
               alt="avatar"
             />
-            <h6 className="mt-2">Upload a different photo</h6>
+            <h6 className="mt-2">{languageContextAPI.t("profile.1")}</h6>
             <label className="custom-file">
               <input type="file" id="file" className="custom-file-input" />
-              <span className="custom-file-control">Choose file</span>
+              <span className="custom-file-control">{languageContextAPI.t("profile.2")}</span>
             </label>
             <hr />
             <span className="badge badge-primary">
-              <i className="fa fa-user"></i> 900 Followers
+              <i className="fa fa-user"></i> 900  {languageContextAPI.t("profile.3")}
             </span>
-            <span className="badge badge-success">
-              <i className="fa fa-cog"></i> 43 Forks
-            </span>
+           
             <span className="badge badge-danger">
-              <i className="fa fa-eye"></i> 245 Views
+              <i className="fa fa-eye"></i> 245 {languageContextAPI.t("profile.4")}
             </span>
           </div>
         </div>

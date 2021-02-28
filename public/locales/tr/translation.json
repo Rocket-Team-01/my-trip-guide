@@ -83,5 +83,30 @@
     "4": " Bu proje kapsamında anasayfa içeriği kullanıcının konumuna göre yakın restoranlardan oluşmaktadır. Arama kısmında ise aranan şehirdeki restoranlar gösterilecektir. Projemizd kullanılan teknolojiler:",
     "5": "Projenin Bize Kattıkları",
     "6": "Proje yaparken teknik anlamda kursta öğrendiğimiz konuları pekiştirdik.Aynı zamanda öğrendiklerimizin üstüne çıkıp doküman okumayı, araştırma yapmayı ve takım oyununun inceliklerini keşfettik."
+  },
+  "profile": {
+    "1": "Başka bir fotoğraf yükle",
+    "2": "Dosya Seç",
+    "3": "Takipçi",
+    "4": "Gösterim",
+    "5": "Profil",
+    "6": "Tercihler",
+    "7": "Kullanıcı Profili",
+    "8": "Kullanıcı adı",
+    "9": "Ad",
+    "10": "Soyad",
+    "11": "Email",
+    "12": "Telefon",
+    "13": "Addres",
+    "14": "Sokak",
+    "15": "Şehir",
+    "16": "Ülke",
+    "17": "Şifre",
+    "18": "Şifreyi Doğrula",
+    "19": "Değiştir",
+    "20": "Beni takip eden birisi",
+    "21": "Restaurant Searcher'a katılan arkadaşlarım",
+    "22": "Restaurant Searcher'dan önemli güncellemeler",
+    "23": "Aylık haber bülteni"
   }
 }
