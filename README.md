@@ -1,4 +1,4 @@
-## Demo https://jovial-kepler-dfa647.netlify.app/
+## Demo https://youthful-khorana-895e44.netlify.app
 # Restaurant App
 
 - Restaurant App lists the best rating restaurants with the information of user's location info and which type of restaurant the user wants to. Users will have 2 different lists on their profile page. The first list will be about restaurants that users want to go to some time and the other list will be about their favorite restaurants. If they change their mind about the items in their list they can easily delete the item they want to.
